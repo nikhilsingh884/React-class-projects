@@ -1,8 +1,8 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
 createSlice({
-    name:"cart",
-    initialState:{
-        totalItem:10
+    name: "cart",
+    initialState: {
+        totalItem: 11
     }
 })
