@@ -1,11 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function CocktailCard({ item }) {
     const { strDrinkThumb, strCategory, strDrink, idDrink } = item;
+
+    const navigate = useNavigate();
     return (
 
-        <div className="col-md-2 mb-5">
-            <div className="card">
+        <div className="col-md-2 mb-5" >
+            <div className="card" onClick={()=>navigate(`/cocktail/${idDrink}`)} style={{cursor:"pointer"}}>
                 <img src={strDrinkThumb} className="w-100" alt="" />
                 <div className="card-body p-2">
                     <h6 className="m-0">{strDrink}</h6>

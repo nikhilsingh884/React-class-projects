@@ -6,23 +6,28 @@ import { getCocktailList } from "../Redux/cocktailSlice";
 function Cocktail() {
   const { loading, cocktailList } = useSelector((state) => state.cocktail);
   const dispatch = useDispatch();
-  const [searchValue, setSerachValue]=useState("apple")
+  const [searchValue, setSerachValue] = useState("")
 
   useEffect(() => {
-    dispatch(getCocktailList({search: searchValue}));
-  }, []);
+    dispatch(getCocktailList({ search: searchValue }));
+  }, [searchValue]);
 
-  if (loading) {
-    return <h2>Loading</h2>;
-  }
+
 
   return (
     <div className="container py-4">
       <div>
         <h1>Cocktails</h1>
         <div className="d-flex justify-content-center">
-          <input type="text" placeholder="search cocktails" className="form-control w-25" value={searchValue} onChange={(e)=>setSerachValue(e.target.value)}/>
+          <input type="text" placeholder="search cocktails" className="form-control w-25" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
         </div>
+
+        <div className="container d-flex justify-content-center align-items-center  pt-5">{
+          loading && <h2>Loading</h2>
+        }
+        </div>
+        
+
       </div>
       <div className="row py-5">
         {
