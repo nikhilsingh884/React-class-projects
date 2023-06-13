@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import ArrayList from "./ArrayList";
 
 
 
@@ -7,7 +8,7 @@ function App() {
 
     return (
         <>
-        This is test commit for assignment .
+        <ArrayList/>
         </>
     )
 }
