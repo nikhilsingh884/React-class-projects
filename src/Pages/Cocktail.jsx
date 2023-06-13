@@ -23,11 +23,10 @@ function Cocktail() {
         </div>
 
         <div className="container d-flex justify-content-center align-items-center  pt-5">{
-          loading && <h2>Loading</h2>
+          loading && <h2>Loading..</h2>
         }
-        </div>
         
-
+        </div>
       </div>
       <div className="row py-5">
         {

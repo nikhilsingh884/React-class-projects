@@ -81,7 +81,7 @@ const cocktailSlice=createSlice({
             state.loading = false;
             state.cocktailDetails= action.payload
             
-        },
+        }
 
 
     }

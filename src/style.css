@@ -4,7 +4,7 @@ a {
 }
 
 a:hover {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(38, 61, 235) !important;
 }
 
 input::placeholder {
