@@ -31,15 +31,17 @@ function ArrayList() {
     ]
     return (
         <div className="container p-4">
+            <h1>React JS assignment: Module-3</h1>
+            <h3>Ques-1: How to Create a List View in React Js? </h3>
         <div>
             {arrayData.map((item, id)=>{
                 const { name, dept,age}=item;
                 console.log(item.name)
                 return (
                     <div className='card shadow p-4 mb-3'>
-                        <h1 key={id}>{name}</h1>
-                        <h4>{dept}</h4>
-                        <h4>{age}</h4>
+                        <h1 key={id}>Name: {name}</h1>
+                        <h4>Department: {dept}</h4>
+                        <h4>Age: {age}</h4>
                     </div>
                 )
             })}

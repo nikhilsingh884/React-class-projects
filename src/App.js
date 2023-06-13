@@ -1,5 +1,6 @@
-import { Route, Routes } from "react-router-dom";
+
 import ArrayList from "./ArrayList";
+import IncDec from "./IncDec";
 
 
 
@@ -8,7 +9,8 @@ function App() {
 
     return (
         <>
-        <ArrayList/>
+            <ArrayList />
+            <IncDec />
         </>
     )
 }
