@@ -7,7 +7,7 @@ function Navbar() {
         <div>
             <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" href="/"><img src={logo} style={{height:"42px", width:"85px"}} alt="" /></NavLink>
+                    <NavLink className="navbar-brand" to="/"><img src={logo} style={{height:"42px", width:"85px"}} alt="" /></NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
