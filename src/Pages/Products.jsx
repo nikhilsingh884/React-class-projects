@@ -1,17 +1,33 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { getProductList } from '../Redux/ProductSlice';
+import { getProductList } from '../Redux/ProductSlice'
+import { useDispatch, useSelector } from 'react-redux'
 
 function Products() {
 
-    const dispatch = useDispatch();
+const dispatch= useDispatch();
+const {loading,productList}=useSelector((state)=>state.product)
 
     useEffect(() => {
         dispatch(getProductList())
     }, [])
+
+
     return (
-        <div>
-<h1>this is product page.</h1>
+        <div className='container'>
+            <div className="row">
+
+                {
+                    productList.map((item,index)=>{
+                        const {}=item;
+                        return <div className="col-md-3 p-4">
+                            <div className="card">
+                                <img src="" alt="" />
+                            </div>
+                        </div>
+                    })
+                }
+            </div>
+            
         </div>
     )
 }
