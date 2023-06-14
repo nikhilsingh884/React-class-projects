@@ -1,22 +1,23 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../Images/cyan-logo.png'
 
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" href="/">Navbar scroll</NavLink>
+                    <NavLink className="navbar-brand" href="/"><img src={logo} style={{height:"42px", width:"85px"}} alt="" /></NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarScroll">
                         <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{}}>
                             <li className="nav-item">
-                                <NavLink className="nav-link active" aria-current="page" href="/">Home</NavLink>
+                                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" href="/">Link</NavLink>
+                                <NavLink className="nav-link" to="/products">Products</NavLink>
                             </li>
                             <li className="nav-item dropdown">
                                 <NavLink className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
