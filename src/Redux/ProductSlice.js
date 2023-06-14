@@ -15,7 +15,7 @@ export const getProductList = createAsyncThunk("getProductList", async (searchVa
 })
 
 // ========================================================================================
-export const getProductDetails = createAsyncThunk("getProductDetails", async (id, { }) => {
+export const getProductDetails = createAsyncThunk("getProductDetails", async (id) => {
     try {
         const response = await axios.get(`https://dummyjson.com/products/search?q=${id}`)
         console.log(response.data.products[0]);
