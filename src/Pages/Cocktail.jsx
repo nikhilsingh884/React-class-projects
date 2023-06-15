@@ -17,18 +17,21 @@ function Cocktail() {
   return (
     <div className="container py-4">
       <div>
-        <h1>Cocktails</h1>
-        <div className="d-flex justify-content-center">
-          <input type="text" placeholder="search cocktails" className="form-control w-25" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+        <div className="d-flex justify-content-between">
+          <h1>Cocktails</h1>
+          <div className="d-flex justify-content-center align-items-center">
+            <input type="text" placeholder="search cocktails" className="form-control border border-2 h-75" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+          </div>
         </div>
+        <hr />
 
         <div className="container d-flex justify-content-center align-items-center  pt-5">{
           loading && <h2>Loading..</h2>
         }
-        
+
         </div>
       </div>
-      <div className="row py-5">
+      <div className="row py-2">
         {
           cocktailList &&
           cocktailList.map((item, index) => {

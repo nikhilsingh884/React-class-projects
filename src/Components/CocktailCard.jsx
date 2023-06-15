@@ -17,8 +17,8 @@ function CocktailCard({ item }) {
                     </p>
                 </div>
                 <div className="card-footer px-1 d-flex justify-content-between">
-                    <div className="btn btn-danger btn-sm">View more</div>
-                    <div className="btn btn-primary btn-sm">Add to cart</div>
+                    <div className="btn btn-outline btn-sm">View more</div>
+                    <div className="btn btn-outline  btn-sm">Add to cart</div>
                 </div>
             </div>
         </div>

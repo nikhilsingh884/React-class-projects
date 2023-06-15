@@ -1,13 +1,18 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
+import logo from "../Images/cyan-logo.png"
 
 function Navbar() {
+    const data = useLocation();
+    if (data.pathname === '/login') {
+        return null
+    }
     return (
         <div>
             <div className="">
                 <nav className="navbar navbar-expand-lg bg-body-light">
                     <div className="container-fluid">
-                        <NavLink className="navbar-brand" href="#">Navbar</NavLink>
+                        <NavLink> <img src={logo} style={{height:"40px", width:"80px", marginRight:"30px"}} alt="" /></NavLink>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
@@ -24,6 +29,9 @@ function Navbar() {
                                 </li>
                                 <li className="nav-item">
                                     <NavLink className="nav-link ">About</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link " to="/Help">Help</NavLink>
                                 </li>
                             </ul>
                         </div>
