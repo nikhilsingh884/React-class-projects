@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../Redux/authSlice';
-import { Formik, Form, Field, ErrorMessage, validateYupSchema } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string,email, number, date, InferType } from 'yup'; 
 function Login() {
 
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
+
+  const {loading, isLogin, errorMsg}=useSelector((state)=>state.auth)
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -44,7 +46,6 @@ function Login() {
       <div className="row">
 
         <div className="col-md-4 offset-4 rounded-3 border border-1   p-5 bg-light login">
-
           <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={formSubmit}>{
             ()=>{
               return<Form>
@@ -54,8 +55,14 @@ function Login() {
 
                 <Field name="password" type="password" className="form-control mb-4"  placeholder="Enter password"/> 
                 <ErrorMessage className='text-danger mb-2' name="password" component="div" />
+                <p className='text-danger loginError'>{errorMsg}</p>
 
-                <button className='btn-primary btn w-100 mb-3' type='submit'>Login</button>
+                <button className='btn-primary btn w-100 mb-3' type='submit'>
+                  {
+                    loading ? "logging in.." : "Login"
+                  }
+                  </button>
+                  
                 <Link to="/help"> <p className='my-0'>Forgot password?</p></Link>
 
               </Form>

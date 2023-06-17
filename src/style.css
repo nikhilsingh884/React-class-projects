@@ -68,3 +68,6 @@ input::placeholder {
     max-width: 50%;
     line-height: 1.3;
 }
+.loginError{
+    font-size: 12px !important;
+}

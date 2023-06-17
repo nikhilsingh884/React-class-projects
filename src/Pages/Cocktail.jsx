@@ -20,7 +20,7 @@ function Cocktail() {
         <div className="d-flex justify-content-between">
           <h1>Cocktails</h1>
           <div className="d-flex justify-content-center align-items-center">
-            <input type="text" placeholder="search cocktails" className="form-control border border-2 h-75" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+            <input type="text" placeholder="search cocktails" className="form-control border border-2 h-75" value={searchValue} onChange={(e) => setSerachValue(e.target.value)}/>
           </div>
         </div>
         <hr />
