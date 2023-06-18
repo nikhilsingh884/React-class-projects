@@ -15,7 +15,7 @@ function Cocktail() {
 
 
   return (
-    <div className="container py-4">
+    <div className="container py-4 mt-5 ">
       <div>
         <div className="d-flex justify-content-between">
           <h1>Cocktails</h1>
@@ -26,7 +26,22 @@ function Cocktail() {
         <hr />
 
         <div className="container d-flex justify-content-center align-items-center  pt-5">{
-          loading && <h2>Loading..</h2>
+          loading && <div>
+            <div class="loader">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <div class="bar4"></div>
+              <div class="bar5"></div>
+              <div class="bar6"></div>
+              <div class="bar7"></div>
+              <div class="bar8"></div>
+              <div class="bar9"></div>
+              <div class="bar10"></div>
+              <div class="bar11"></div>
+              <div class="bar12"></div>
+            </div>Loading...
+          </div>
         }
 
         </div>

@@ -7,7 +7,7 @@ function CocktailCard({ item }) {
     const navigate = useNavigate();
     return (
 
-        <div className="col-md-3 mb-5" >
+        <div className="col-md-2 col-sm-6 mb-5" >
             <div className="card" onClick={()=>navigate(`/cocktail/${idDrink}`)} style={{cursor:"pointer"}}>
                 <img src={strDrinkThumb} className="w-100" alt="" />
                 <div className="card-body p-2">

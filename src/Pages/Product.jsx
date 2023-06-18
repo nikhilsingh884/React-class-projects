@@ -17,7 +17,7 @@ function Product() {
   }, [])
 
   return (
-    <div className='container py-5'>
+    <div className='container py-5 mt-5'>
       <div className="d-flex justify-content-between">
         <h1>Products</h1>
         <div className="d-flex justify-content-center align-items-center">
@@ -25,7 +25,22 @@ function Product() {
         </div>
       </div>
       <hr />
-      {loading && <h2>Loading..</h2>}
+      {loading && <div className='d-flex justify-content-center'>
+        <div class="loader">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <div class="bar4"></div>
+          <div class="bar5"></div>
+          <div class="bar6"></div>
+          <div class="bar7"></div>
+          <div class="bar8"></div>
+          <div class="bar9"></div>
+          <div class="bar10"></div>
+          <div class="bar11"></div>
+          <div class="bar12"></div>
+        </div>Loading...
+      </div>}
       <div className="row py-5">
         {
           productList &&

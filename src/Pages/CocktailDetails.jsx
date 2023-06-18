@@ -22,7 +22,7 @@ function CocktailDetails() {
     // console.log(cocktailDetails);
 
     return (
-        <div className='container container-details py-5'>
+        <div className='container container-details py-5 mt-5'>
             <div className='border border-2 rounded-3 shadow bg-bg-secondary-subtle'>
                 <div className="row">
                     <div className="col-md-4 p-5">

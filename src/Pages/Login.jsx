@@ -49,7 +49,7 @@ function Login() {
           <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={formSubmit}>{
             ()=>{
               return<Form>
-
+                <h4 className='text-center mb-4'>Login</h4>
                 <Field name="email" type="email" className="form-control mb-4" placeholder="Enter email"/>
                 <ErrorMessage className='text-danger mb-2' name="email" component="div"/>
 
@@ -63,7 +63,7 @@ function Login() {
                   }
                   </button>
                   
-                <Link to="/help"> <p className='my-0'>Forgot password?</p></Link>
+                <Link to="/help"> <p className='my-0 text-primary'>Forgot password?</p></Link>
 
               </Form>
             }
