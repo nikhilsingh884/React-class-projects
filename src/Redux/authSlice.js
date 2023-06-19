@@ -11,6 +11,22 @@ function getLocalStorage(){
     
 }
 
+// ============================Signup========================================
+
+export const signup= createAsyncThunk("signup", async({formValue,navigate}, {dispatch})=>{
+    try {
+        const Signresponse = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCKmrEfz1uiGavj3tBhCo2EcAFFQiQIt7o", formValue)
+        navigate("/login")
+        if (Signresponse.status=200){
+            alert("Account created successfully...😃")
+        }
+        console.log(Signresponse)
+    } catch (error) {
+    }
+})
+
+// ============================Signup========================================
+
 export const login = createAsyncThunk("login", async ({ formValue, navigate }, { dispatch }) => {
 
     try {
@@ -27,6 +43,8 @@ export const login = createAsyncThunk("login", async ({ formValue, navigate }, {
         dispatch(loginFail(error.response.data.error.message))
     }
 })
+
+// ===================================================================================
 
 const authSlice = createSlice({
     name: "Auth",
@@ -63,7 +81,6 @@ const authSlice = createSlice({
             alert("Logout?")
             state.isLogin=false
             localStorage.removeItem("appLogin");
-
         }
     }
 })

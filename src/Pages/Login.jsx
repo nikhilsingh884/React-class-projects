@@ -3,21 +3,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../Redux/authSlice';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { object, string,email, number, date, InferType } from 'yup'; 
+import { object, string} from 'yup';
 function Login() {
 
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
 
-  const {loading, isLogin, errorMsg}=useSelector((state)=>state.auth)
+  const { loading, isLogin, errorMsg } = useSelector((state) => state.auth)
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  function formSubmit(value){
+  function formSubmit(value) {
     console.log("value", value);
     dispatch(login({ formValue: value, navigate }))
-    
+
   }
 
   const initialValues =
@@ -27,7 +27,7 @@ function Login() {
   }
 
   const validationSchema = object({
-    email:string().email("Email is required").required("Email is required"),
+    email: string().email("Email is required").required("Email is required"),
     password: string().min(8, "password must be atleast 8 characters").max(20, "password can be maximum 20 characters ").required("Password is required")
   })
 
@@ -41,19 +41,20 @@ function Login() {
 
   return (
 
-    <div className='container py-5'>
+    <div className='container login py-5'>
       <div className="back-btn mb-3" style={{ cursor: "pointer" }} onClick={() => navigate("/")}> <span className='fa-solid fa-angle-left'></span>&nbsp; Back </div>
-      <div className="row">
 
-        <div className="col-md-4 offset-4 rounded-3 border border-1   p-5 bg-light login">
+      <div className="row px-2 d-flex justify-content-center">
+
+        <div className="col-md-4  rounded-3 border border-1   p-5 bg-light login">
           <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={formSubmit}>{
-            ()=>{
-              return<Form>
+            () => {
+              return <Form>
                 <h4 className='text-center mb-4'>Login</h4>
-                <Field name="email" type="email" className="form-control mb-4" placeholder="Enter email"/>
-                <ErrorMessage className='text-danger mb-2' name="email" component="div"/>
+                <Field name="email" type="email" className="form-control mb-4" placeholder="Enter email" />
+                <ErrorMessage className='text-danger mb-2' name="email" component="div" />
 
-                <Field name="password" type="password" className="form-control mb-4"  placeholder="Enter password"/> 
+                <Field name="password" type="password" className="form-control mb-4" placeholder="Enter password" />
                 <ErrorMessage className='text-danger mb-2' name="password" component="div" />
                 <p className='text-danger loginError'>{errorMsg}</p>
 
@@ -61,9 +62,13 @@ function Login() {
                   {
                     loading ? "logging in.." : "Login"
                   }
-                  </button>
-                  
-                <Link to="/help"> <p className='my-0 text-primary'>Forgot password?</p></Link>
+                </button>
+
+                <div className='d-flex justify-content-between'>
+                  <Link to="/help"> <p className='my-0 text-primary'>Forgot password?</p></Link>
+                  <Link to="/signup"> <p className='my-0 text-primary'>Sign up</p></Link>
+                </div>
+
 
               </Form>
             }

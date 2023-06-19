@@ -2,7 +2,38 @@
     font-family: Poppins;
 }
 
-a {
+/* .header-social .nav-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    padding: 7px 45px !important;
+}
+
+.header-social .nav-sub .contacts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+}
+
+.header-social .nav-sub .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 200;
+}
+
+.header-social .nav-sub .socials a {
+    color: white !important;
+} */
+
+.navbar a {
+    position: relative;
     font-size: 14px !important;
     color: rgb(82, 82, 82) !important;
     font-weight: 400 !important;
@@ -13,10 +44,19 @@ p {
     color: #cbcbcb;
 }
 
-a:hover {
+
+.navbar a:hover {
     color: rgb(0, 0, 0) !important;
-    transform: scale(1.1);
 }
+
+/* .marquee{
+    position: absolute;
+    bottom: -30px;
+    color: white;
+    width: 100%;
+    background-color: #000000b1;
+    backdrop-filter: blur(25px);
+} */
 .loader {
     position: relative;
     width: 54px;
@@ -106,19 +146,28 @@ a:hover {
     transform: rotate(330deg) translate(0, -130%);
     animation-delay: -0.1s;
 }
+
 /* ===========================================NAVBAR======================================================= */
 .navbar input {
     background-color: rgba(241, 241, 241, 0.684) !important;
     backdrop-filter: blur(35px);
+    padding: 5px 0px !important;
 }
 
 .mobilesearchbar {
     display: none;
 }
 
+.mobilesearchbar input {
+    height: 35px;
+    border: 1px solid rgb(211, 211, 211) !important;
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    outline: none !important;
+}
+
 .navbar input::placeholder {
     text-align: center;
-    font-size: 14px !important;
+    font-size: 16px !important;
 }
 
 .badge {
@@ -126,19 +175,21 @@ a:hover {
     right: -2px !important;
 }
 
+
+
 .navbar {
-    /* position: fixed; */
-    top: 0;
-    z-index: 5;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.732) !important;
-    /* background-color:  rgb(0, 160, 252) !important; */
     backdrop-filter: blur(25px);
     border-bottom: 1px solid rgb(198, 198, 198);
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
 }
 
 .loginError {
@@ -148,7 +199,8 @@ a:hover {
 .nav-items {
     padding: 0 40px;
     border-radius: 30px;
-    background-color: rgba(241, 241, 241, 0.684) !important;
+    border: 1px solid rgb(217, 217, 217);
+    background-color: rgba(241, 241, 241, 0.532) !important;
 
 }
 
@@ -156,15 +208,21 @@ a:hover {
     padding: 0 10px !important;
 }
 
+
 .loginBtn {
     /* height: 10px !important; */
-    border-right: 2px solid rgb(173, 173, 173);
+    border-right: 2px solid rgb(138, 138, 138);
 
 }
-.mobileloginBtn{
+
+.mobileloginBtn {
     display: none;
 }
 
+/* ===========================================Login-PAGE======================================================= */
+.login a {
+    font-size: 12px !important;
+}
 
 /* ===========================================HOME-PAGE======================================================= */
 .swiper {
@@ -195,9 +253,23 @@ a:hover {
     background-position: center;
 }
 
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    transform: scale(0.5);
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    transform: scale(0.5);
+}
+
 .swiper-slide .title {
     font-size: 81px;
     font-weight: 300;
+    line-height: 70px;
+    margin: 40px 0;
 }
 
 .swiper-slide .subtitle {
@@ -212,6 +284,16 @@ a:hover {
 
 /* ===========================================COCKTAIL-PAGE======================================================= */
 
+.cocktails input::placeholder {
+    text-align: center;
+    font-size: 14px !important;
+}
+
+.products input::placeholder {
+    text-align: center;
+    font-size: 14px !important;
+}
+
 /* ===========================================MEDIA_QUERY======================================================= */
 
 
@@ -220,7 +302,8 @@ a:hover {
         display: none;
     }
 
-    .Mobilesearchbar {
+    .mobilesearchbar {
+        flex: 1.5;
         display: block;
         margin-top: 20px;
         margin-left: 0 !important;
@@ -230,8 +313,14 @@ a:hover {
         display: none;
     }
 
+    .mobileloginBtn {
+        display: block;
+    }
+
     .nav-items {
         margin: 15px 0;
+        border-radius: 10px;
+        padding: 0 10px;
     }
 
     .swiper {
@@ -245,18 +334,23 @@ a:hover {
     }
 
     .swiper-slide .title {
-        font-size: 61px;
+        font-size: 44px;
+        margin: 10px 0;
     }
 
     .swiper-slide .subtitle {
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .swiper-slide .text {
-        font-size: 16px;
+        font-size: 14px;
+        max-width: 100%;
     }
 
-    /* .card img {
-        height: 150px;
-    } */
+    .search-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

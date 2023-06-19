@@ -7,6 +7,7 @@ import CocktailDetails from "./Pages/CocktailDetails";
 import PrivateRoute from "./Components/PrivateRoute";
 import Login from "./Pages/Login";
 import Help from "./Pages/Help";
+import Signup from "./Pages/Signup";
 
 
 
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/cocktail/:id" element={<PrivateRoute> <CocktailDetails /> </PrivateRoute>} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
                 <Route path="/help" element={<Help />} />
 
             </Routes>

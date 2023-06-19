@@ -8,7 +8,7 @@ function ProductCard({item}) {
 
   return (
     <div className="col-md-2 mb-5" >
-      <div className="card" onClick={() => navigate(`/cocktail/${id}`)} style={{ cursor: "pointer" }}>
+      <div className="card shadow" onClick={() => navigate(`/product/${id}`)} style={{ cursor: "pointer" }}>
         <img style={{height:"150px", width:"150px"}} src={image} className="w-100" alt="" />
         <div className="card-body p-2">
           <h6 className="m-0 text-truncate">{title}</h6>

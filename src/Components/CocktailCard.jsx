@@ -8,7 +8,7 @@ function CocktailCard({ item }) {
     return (
 
         <div className="col-md-2 col-sm-6 mb-5" >
-            <div className="card" onClick={()=>navigate(`/cocktail/${idDrink}`)} style={{cursor:"pointer"}}>
+            <div className="card shadow" onClick={()=>navigate(`/cocktail/${idDrink}`)} style={{cursor:"pointer"}}>
                 <img src={strDrinkThumb} className="w-100" alt="" />
                 <div className="card-body p-2">
                     <h6 className="m-0">{strDrink}</h6>

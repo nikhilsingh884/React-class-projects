@@ -32,12 +32,12 @@ function Home() {
             className="parallax-bg"
             style={{
               "background-image":
-                "url(https://images.unsplash.com/photo-1527283646354-d874f249ea2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
+                "url(https://wallpaperaccess.com/download/black-headphones-5504500)",
             }}
             data-swiper-parallax="-23%"
           ></div>
           <SwiperSlide className='mt-5'>
-            <div className="slide">
+            <div className="slide ">
               <div className="title text-info" data-swiper-parallax="-300">
                 Mobile Phones
               </div>
@@ -46,13 +46,7 @@ function Home() {
               </div>
               <div className="text" data-swiper-parallax="-100">
                 <p className='fw-light'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                  dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                  laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                  Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                  Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                  ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                  tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                  Discover the latest collection of cutting-edge mobile phones at our ecommerce store.  Whether you're an avid photographer, a multitasker, or a gaming enthusiast, we have the perfect mobile phone to suit your needs. 
                 </p>
             <hr />
                 <div className="btn btn-outline-light" onClick={() => navigate('/Product')}>Browse mobile phones</div>
@@ -68,13 +62,7 @@ function Home() {
             </div>
             <div className="text" data-swiper-parallax="-100">
               <p className='fw-light'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                Immerse yourself in stunning visuals with vibrant displays that bring your favorite movies, games, and presentations to life. Enjoy razor-sharp clarity, accurate color reproduction, and wide viewing angles for an immersive viewing experience. 
               </p>
               <hr />
 
@@ -91,13 +79,7 @@ function Home() {
             </div>
             <div className="text" data-swiper-parallax="-100">
               <p className='fw-light'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                Explore our selection of professional-grade brushes, sponges, and tools that facilitate effortless application and precision, allowing you to achieve a flawless makeup look. From blending brushes to precision liners, our tools are designed for both makeup enthusiasts and professionals alike.
               </p>
               <hr />
 
@@ -108,7 +90,10 @@ function Home() {
 
         </Swiper>
       </div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odit debitis repudiandae quas molestias. Maxime quisquam ipsa, velit reiciendis quae hic odit commodi? Voluptas harum nam totam suscipit praesentium doloribus natus, ab aliquam eum explicabo eos consequatur tenetur, dolorem magnam repudiandae velit repellat! Doloremque, non mollitia rem voluptate atque autem consequatur assumenda qui totam, culpa consequuntur et sapiente natus fugit rerum aut? Vel repellat voluptatem beatae! Quos quae saepe deserunt, commodi veniam nihil voluptas nam consectetur ut officia aliquam dolor eos iste, corrupti blanditiis, nemo velit porro quo nesciunt illum. Natus iusto excepturi provident architecto? Harum, reiciendis ratione tenetur, suscipit dicta voluptatum odit voluptas molestiae possimus a rem corrupti libero minima laboriosam repudiandae et dolorem ea provident repellat soluta repellendus? Eum dolores soluta possimus incidunt doloremque quae eaque necessitatibus accusamus aspernatur, cum, a, nulla eos et quod cupiditate quibusdam ut sunt maiores! Nam accusantium veritatis possimus natus debitis ratione perferendis odio recusandae, itaque soluta repudiandae amet atque dolore magnam repellendus aliquid ea nobis, tenetur quasi ab hic unde rem sint placeat. Quaerat optio accusantium molestias cum, nisi error temporibus odio similique cumque omnis totam ipsa assumenda? Accusamus expedita culpa aspernatur? Sequi, repudiandae saepe aspernatur facilis tenetur suscipit, laboriosam tempora cum illum autem eos repellendus voluptatem libero quo qui eligendi. Quod accusamus dolorem deserunt quis, dicta explicabo repellendus ad vitae enim hic cum aspernatur, similique iste nulla inventore quam id omnis repudiandae amet quaerat, quia odio expedita. Laudantium non dolorem laborum labore ut sed obcaecati repudiandae in aut. Odit enim aliquam beatae eveniet, magnam quidem, soluta officia excepturi cum itaque ullam placeat vel animi. Eius quam consequuntur adipisci nobis soluta dolores quisquam? Vitae, itaque. Velit tempora doloribus quibusdam dolore commodi. Vel consectetur nostrum sequi consequatur unde alias modi ad expedita fugiat corporis deserunt, ab ipsa distinctio laboriosam eveniet? Fugit, voluptatem! Ullam inventore magnam quod dolorum deleniti a suscipit! Eaque maxime accusamus error dicta, est magnam itaque natus qui. Ab officia provident enim est id commodi incidunt, recusandae magni nihil aliquam tenetur libero animi assumenda vero atque! Deleniti maiores tempora sint odit adipisci excepturi earum doloremque ex reprehenderit ab voluptatibus est laborum fugiat provident ipsam similique, officiis tempore quas iusto doloribus. Tempora voluptatem quidem labore delectus inventore, suscipit, placeat recusandae porro cupiditate animi voluptate magnam explicabo distinctio fugit iure voluptates, veritatis minus! Velit ab sit nihil numquam vel aliquam hic distinctio. Officiis dignissimos quis numquam sint, provident saepe suscipit ex tempore mollitia voluptates quasi? Consectetur impedit deserunt rem rerum. Eius dicta impedit obcaecati, reprehenderit quibusdam magni sunt corrupti excepturi quis debitis voluptatibus aut mollitia corporis sint odit quo in suscipit accusantium fuga aliquid quasi architecto autem accusamus doloremque. Quibusdam, enim? Sequi dignissimos velit repellat ipsum! Beatae dolorum esse assumenda quibusdam laudantium laborum et? Repellat quia facere deserunt similique provident eum illum. Molestias quae sequi nihil, ad, distinctio at odio reprehenderit nemo consectetur nam tenetur ipsum magni? Similique iure beatae aliquam atque velit, est numquam natus obcaecati pariatur accusantium nostrum ratione. Perferendis et aut numquam quas distinctio quod delectus quibusdam nemo ratione ipsam?
+      <div className="container py-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eveniet? Beatae, non quam explicabo ex sunt temporibus doloribus perferendis! Nostrum officia omnis consequatur beatae quo, voluptates est quos, molestiae error at iure facere deleniti odit? Minima aliquid sit, quasi quis quas architecto necessitatibus obcaecati atque autem nihil at, cum exercitationem recusandae hic, doloribus et unde nostrum? Quisquam eum corrupti quia fuga nemo minima libero inventore possimus? Ratione rerum ea magni, molestias odit voluptates ab. Qui eos laborum cupiditate inventore nulla sed, ducimus ullam. Natus nostrum quasi necessitatibus esse aliquam neque quibusdam fuga quaerat ut, enim commodi similique quam quos dolores autem hic? Reprehenderit voluptas aliquid animi culpa cupiditate porro consectetur nulla cumque hic velit, eius perspiciatis sit a, quod voluptatibus accusamus non impedit possimus! Vero blanditiis consequuntur fuga qui eligendi quis quos magnam aliquid quia, porro repudiandae repellendus itaque neque, architecto omnis dignissimos consectetur reiciendis molestiae soluta, eos nobis labore reprehenderit. Architecto, obcaecati quidem? Fuga asperiores corrupti nobis dicta repellat vero qui possimus, enim iure recusandae ea. Ipsa quae culpa dolor explicabo sed. Ratione odio tempora assumenda voluptate maxime inventore fuga cumque eos qui totam dolor itaque at, impedit veniam, doloribus vitae hic corporis! Cum ab esse maxime cupiditate asperiores tempora nobis, ea et eligendi repellat voluptate dolore unde dolores id libero illum eius pariatur, numquam enim dolor omnis? Illum, dicta ad? Magnam, eligendi aspernatur dolorum officiis deleniti harum, nemo sunt doloremque totam reiciendis soluta asperiores! Modi nulla quasi quaerat officia explicabo eius cupiditate facilis doloremque, quos totam illo iste sit dolor eaque aliquid nam. Nulla eaque inventore molestias dolor officia iusto explicabo nihil. Provident inventore nemo error eos facilis, saepe ut esse atque voluptate iste earum autem in nostrum reprehenderit praesentium tempora obcaecati fuga consequuntur mollitia quae nobis, iure expedita. Ipsum iusto deleniti sed in perferendis, aperiam obcaecati doloribus mollitia. Praesentium animi repudiandae omnis. Laboriosam sequi, autem nam excepturi libero esse saepe rem tempore laudantium totam itaque hic, velit deserunt quos perspiciatis molestias cupiditate vero quas commodi quibusdam. Ex ea aliquam veritatis asperiores sint ab assumenda exercitationem molestias odio odit, laborum animi, quisquam numquam dolorum rem alias quos veniam at. Debitis, sequi? Itaque quos enim, deleniti ea autem, iure quam illo ipsam laborum quae magni nisi quas, animi distinctio expedita dolore impedit obcaecati nobis rem temporibus sapiente. Aut sit unde est, quam harum ad. Nulla, dolorem eligendi laboriosam quasi, blanditiis commodi consequuntur est explicabo eum repellat temporibus iure modi quis corporis deserunt corrupti reiciendis fuga dolore! Quae necessitatibus praesentium ipsum at eaque, ducimus quasi, nemo obcaecati beatae id rerum sapiente possimus nisi illum sint corporis dolor culpa natus esse iusto sequi! Autem, officia tempora, id repudiandae deserunt reprehenderit consequuntur quia maxime facilis inventore impedit cum beatae similique exercitationem nostrum molestias debitis quam ad! Praesentium nulla, alias harum debitis esse sapiente quo cumque omnis corporis officia iste, dolores possimus delectus! Temporibus, vitae iusto. Nam nesciunt qui animi corporis eaque pariatur excepturi laboriosam veniam ullam voluptates, perspiciatis repellendus voluptatum doloribus deserunt laudantium odit. Possimus, quam. Magni unde labore sit optio quod!
+      </div>
+            
 
     </>
   )
