@@ -46,7 +46,7 @@ function Login() {
 
       <div className="row px-2 d-flex justify-content-center">
 
-        <div className="col-md-4  rounded-3 border border-1   p-5 bg-light login">
+        <div className="col-md-4  rounded-3 border border-1  shadow p-5 bg-light login">
           <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={formSubmit}>{
             () => {
               return <Form>

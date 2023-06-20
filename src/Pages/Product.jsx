@@ -25,7 +25,7 @@ function Product() {
         </div>
       </div>
       <hr />
-      <div className="container d-flex justify-content-center align-items-center  pt-5">{
+      <div className="container d-flex justify-content-center align-items-center">{
         loading && <div>
           <div class="loader">
             <div class="bar1"></div>

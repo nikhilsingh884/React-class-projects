@@ -23,46 +23,52 @@ function Signup() {
 
     const initialValues =
     {
-        name:"",
+        name: "",
         email: "",
         password: ""
     }
 
     return (
-        <div className='container py-5'>
+        <div className='signup-body py-5'>
             <div className="row d-flex justify-content-center">
-                <div className="col-md-4  rounded-3 border border-1   p-5 bg-light ">
+                <div className="col-md-4  rounded-3 border border-1  shadow p-5 bg-light ">
                     <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={signupSubmit}>
                         {
                             () => {
-                                return <Form>
-                                    <h4 className='text-center mb-4'>Signup</h4>
+                                return (
 
-                                    <Field name="name" type="text" className="form-control mb-4" placeholder="Enter name" />
-                                    <ErrorMessage className='text-danger mb-2' name="name" component="div" />
+                                    <Form>
+                                        <h4 className='fs-3 mb-4 '>Sign up</h4>
+                                        <hr />
+                                        <label className='fw-bold text-muted' htmlFor="name">Enter name</label>
+                                        <Field name="name" type="text" className="form-control mb-3" />
+                                        <ErrorMessage className='text-danger mb-2' name="name" component="div" />
 
-                                    <Field name="email" type="email" className="form-control mb-4" placeholder="Enter email" />
-                                    <ErrorMessage className='text-danger mb-2' name="email" component="div" />
+                                        <label className='fw-bold text-muted' htmlFor="name">Enter email</label>
+                                        <Field name="email" type="email" className="form-control mb-3"  />
+                                        <ErrorMessage className='text-danger mb-2' name="email" component="div" />
 
-                                    <Field name="password" type="password" className="form-control mb-4" placeholder="Enter password" />
-                                    <ErrorMessage className='text-danger mb-2' name="password" component="div" />
-                                    
-
-                                    <p className='text-danger loginError'>{ }</p>
-
-                                    <button className='btn-primary btn w-100 mb-3' type='submit'>
-                                        {
-                                            loading ? "Signing up.." : "SignUp"
-                                        }
-                                    </button>
-
-                                    <div className='d-flex justify-content-end'>
-
-                                        <Link to="/login"> <p className='my-0 text-primary'>Login</p></Link>
-                                    </div>
+                                        <label className='fw-bold text-muted' htmlFor="name">Enter password</label>
+                                        <Field name="password" type="password" className="form-control mb-3"/>
+                                        <ErrorMessage className='text-danger mb-2' name="password" component="div" />
 
 
-                                </Form>
+                                        <p className='text-danger loginError'>{ }</p>
+
+                                        <button className='btn-primary btn w-100 mb-3' type='submit'>
+                                            {
+                                                loading ? "Signing up.." : "SignUp"
+                                            }
+                                        </button>
+                                        <p className='text-muted agree'>By continuing, you agree to Nikhil's Conditions of Use and Privacy Notice.</p>
+                                        <div className='d-flex justify-content-end'>
+
+                                            <Link to="/login"> <p className='my-0 text-primary agree'>Back to login</p></Link>
+                                        </div>
+
+
+                                    </Form>
+                                )
                             }
                         }
                     </Formik>

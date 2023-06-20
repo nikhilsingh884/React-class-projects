@@ -32,7 +32,7 @@ function Home() {
             className="parallax-bg"
             style={{
               "background-image":
-                "url(https://wallpaperaccess.com/download/black-headphones-5504500)",
+                "url(https://images.unsplash.com/photo-1516724562728-afc824a36e84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80)",
             }}
             data-swiper-parallax="-23%"
           ></div>

@@ -22,10 +22,17 @@ export const signup= createAsyncThunk("signup", async({formValue,navigate}, {dis
         }
         console.log(Signresponse)
     } catch (error) {
+        if (error.message === "Network Error"){
+            alert("Sign up failed. Check your internet connection.")
+        }
+        else{
+        alert("Sign up failed..😕");
+        console.log(error);
+        }
     }
 })
 
-// ============================Signup========================================
+// ============================Sign in========================================
 
 export const login = createAsyncThunk("login", async ({ formValue, navigate }, { dispatch }) => {
 
@@ -34,6 +41,7 @@ export const login = createAsyncThunk("login", async ({ formValue, navigate }, {
         const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCKmrEfz1uiGavj3tBhCo2EcAFFQiQIt7o", formValue)
         console.log(response);
         if (response.status === 200) {
+        
             navigate("/");
             dispatch(loginSuccess())
         }

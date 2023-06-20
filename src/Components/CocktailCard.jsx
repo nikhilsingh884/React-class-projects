@@ -11,7 +11,7 @@ function CocktailCard({ item }) {
             <div className="card shadow" onClick={()=>navigate(`/cocktail/${idDrink}`)} style={{cursor:"pointer"}}>
                 <img src={strDrinkThumb} className="w-100" alt="" />
                 <div className="card-body p-2">
-                    <h6 className="m-0">{strDrink}</h6>
+                    <h6 className="m-0 text-truncate">{strDrink}</h6>
                     <p className="m-0 text-secondary" style={{ fontSize: "12px" }}>
                         {strCategory}
                     </p>
