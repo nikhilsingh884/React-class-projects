@@ -34,11 +34,11 @@ function Navbar() {
                         </div>
                     </div>
                 </section> */}
-                <nav className="navbar navbar-expand-lg bg-body-light fixed-top ">
-                    
-                    <div className="container-fluid  ">
+                <nav className="navbar navbar-expand-lg bg-body-light fixed-top  ">
+
+                    <div className="container-fluid     ">
                         <div onClick={() => (navigate("/"))}> <img src={logo} style={{ height: "40px", width: "80px", marginRight: "30px" }} alt="" /></div>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
 
@@ -68,19 +68,36 @@ function Navbar() {
                                 </li>
                             </ul>
                             <hr className='my-0' />
-                            <div className='mobileloginBtn text-end'>
-                                {
-                                    isLogin ? <button className='btn btn-outline ' onClick={() => (dispatch(logout()))}>Logout </button> : <button className='btn btn-outline' onClick={() => { navigate('/login') }}>Sign in</button>
-                                }
+                            <div className="ham-bottom d-flex justify-content-between align-items-center">
+
+                                <div className="mobileCart">
+                                    <Link to="/Cart"> <div className=' d-flex align-items-center' style={{ position: "relative" }}>
+                                        <span
+                                            style={{ marginRight: "25px", position: "relative" }}
+                                            className="fa-solid fa-light fa-cart-shopping position-relative"
+                                        ></span>
+                                        <span style={{ fontSize: "10px" }} class="position-absolute translate-middle badge  rounded-pill bg-light  text-dark">
+                                            { }
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </div>
+                                    </Link>
+                                </div>
+
+                                <div className='mobileloginBtn text-end'>
+                                    {
+                                        isLogin ? <button className='btn btn-outline ' onClick={() => (dispatch(logout()))}>Logout </button> : <button className='btn btn-outline' onClick={() => { navigate('/login') }}>Sign in</button>
+                                    }
+                                </div>
                             </div>
                         </div>
-                        <Link to="/Cart"> <div className=' d-flex align-items-center' style={{ position: "relative" }}>
+                        <Link to="/Cart"> <div className='webCart d-flex align-items-center' style={{ position: "relative" }}>
                             <span
                                 style={{ marginRight: "25px", position: "relative" }}
                                 className="fa-solid fa-light fa-cart-shopping position-relative"
                             ></span>
                             <span style={{ fontSize: "10px" }} class="position-absolute translate-middle badge  rounded-pill bg-light  text-dark">
-                                {}
+                                { }
                                 <span class="visually-hidden">unread messages</span>
                             </span>
                         </div>

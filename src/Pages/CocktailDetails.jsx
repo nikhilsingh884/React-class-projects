@@ -63,9 +63,9 @@ function CocktailDetails() {
                         </div>
 
                         <div className='p-3 rounded-3 mt-2 bg-light'>
-                            <h5>
+                            <p className='text-dark'>
                                 {cocktailDetails.strInstructions}
-                            </h5>
+                            </p>
 
                         </div>
                     </div>
