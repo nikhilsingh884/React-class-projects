@@ -9,6 +9,9 @@ import Login from "./Pages/Login";
 import Help from "./Pages/Help";
 import Signup from "./Pages/Signup";
 import About from "./Pages/About";
+import Mobiles from "./Pages/Mobiles";
+import MobilesDetails from "./Pages/MobilesDetails";
+import Inventory from "./Pages/Inventory";
 
 
 
@@ -17,12 +20,16 @@ function App() {
 
     return (
         <>
-        <Navbar/>
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cocktail" element={<Cocktail />} />
                 <Route path="/cocktail/:id" element={<PrivateRoute> <CocktailDetails /> </PrivateRoute>} />
                 <Route path="/product" element={<Product />} />
+                <Route path="/mobiles" element={<Mobiles />} />
+                <Route path="/mobiles/:id" element={<PrivateRoute><MobilesDetails /></PrivateRoute>} />
+                <Route path="/inventory" element={<PrivateRoute><Inventory /></PrivateRoute>} />
+
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/help" element={<Help />} />

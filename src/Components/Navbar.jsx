@@ -37,52 +37,51 @@ function Navbar() {
                 <nav className="navbar navbar-expand-lg bg-body-light fixed-top  ">
 
                     <div className="container-fluid     ">
-                        <div onClick={() => (navigate("/"))}> <img src={logo} style={{ height: "40px", width: "80px", marginRight: "30px" }} alt="" /></div>
+
                         <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
 
+                        <div onClick={() => (navigate("/"))}> <img src={logo} style={{ height: "40px", width: "80px", marginRight: "30px" }} alt="" /></div> 
+
                         <div className="collapse navbar-collapse " id="navbarNav">
                             <div className='mobilesearchbar'>
-                                <input className='form-control rounded-5' placeholder='search products' type="text" />
+                                <input className='form-control' placeholder='search products' type="text" />
                             </div>
                             <ul className="navbar-nav bg-danger nav-items">
                                 <li className="nav-item">
                                     <NavLink className="nav-link active" aria-current="page" to="/"><div className='text-center'><span className="fa-solid fa-house"></span></div>  </NavLink>
                                 </li>
-                                <hr className='my-0 bg-danger' />
+                                <hr className='my-0' />
                                 <li className="nav-item text-center">
                                     <NavLink className="nav-link" to="/Cocktail"> Cocktails </NavLink>
                                 </li>
-                                <hr className='my-0 bg-danger' />
+                                <hr className='my-0' />
                                 <li className="nav-item text-center">
                                     <NavLink className="nav-link" to="/Product">Products</NavLink>
                                 </li>
-                                <hr className='my-0 bg-danger' />
+                                <hr className='my-0' />
+                                <li className="nav-item text-center">
+                                    <NavLink className="nav-link" to="/Mobiles">Mobiles & Laptops</NavLink>
+                                </li>
+                                <hr className='my-0' />
+                                <li className="nav-item text-center">
+                                    <NavLink className="nav-link " to="/inventory">Admin Inventory</NavLink>
+                                </li>
+                                <hr className='my-0' />
                                 <li className="nav-item text-center">
                                     <NavLink className="nav-link " to="/about">About</NavLink>
                                 </li>
-                                <hr className='my-0 bg-danger' />
+                                <hr className='my-0' />
                                 <li className="nav-item text-center">
                                     <NavLink className="nav-link " to="/Help">Help</NavLink>
                                 </li>
+                                
                             </ul>
                             <hr className='my-0' />
                             <div className="ham-bottom d-flex justify-content-between align-items-center">
 
-                                <div className="mobileCart">
-                                    <Link to="/Cart"> <div className=' d-flex align-items-center' style={{ position: "relative" }}>
-                                        <span
-                                            style={{ marginRight: "25px", position: "relative" }}
-                                            className="fa-solid fa-light fa-cart-shopping position-relative"
-                                        ></span>
-                                        <span style={{ fontSize: "10px" }} class="position-absolute translate-middle badge  rounded-pill bg-light  text-dark">
-                                            { }
-                                            <span class="visually-hidden">unread messages</span>
-                                        </span>
-                                    </div>
-                                    </Link>
-                                </div>
+
 
                                 <div className='mobileloginBtn text-end'>
                                     {
@@ -91,24 +90,16 @@ function Navbar() {
                                 </div>
                             </div>
                         </div>
-                        <Link to="/Cart"> <div className='webCart d-flex align-items-center' style={{ position: "relative" }}>
-                            <span
-                                style={{ marginRight: "25px", position: "relative" }}
-                                className="fa-solid fa-light fa-cart-shopping position-relative"
-                            ></span>
-                            <span style={{ fontSize: "10px" }} class="position-absolute translate-middle badge  rounded-pill bg-light  text-dark">
-                                { }
-                                <span class="visually-hidden">unread messages</span>
-                            </span>
-                        </div>
-                        </Link>
+
+
+
                         <div className='loginBtn'>
                             {
                                 isLogin ? <button className='btn btn-outline p-0 pe-2' onClick={() => (dispatch(logout()))}>Logout</button> : <button className='btn btn-outline p-0 pe-2' onClick={() => { navigate('/login') }}>Sign in</button>
                             }
                         </div>
                         <div className='searchbar'>
-                            <input className='mx-2  form-control border border-0 rounded-5' placeholder='search' type="text" />
+                            <input className=' form-control border border-0  px-2' placeholder='search' type="text" />
                         </div>
                     </div>
                 </nav>

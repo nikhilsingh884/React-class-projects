@@ -11,14 +11,13 @@ function CocktailCard({ item }) {
             <div className="card shadow" onClick={()=>navigate(`/cocktail/${idDrink}`)} style={{cursor:"pointer"}}>
                 <img src={strDrinkThumb} className="w-100" alt="" />
                 <div className="card-body p-2">
-                    <h6 className="m-0 text-truncate">{strDrink}</h6>
+                    <h6 className="m-0 text-truncate fw-bold">{strDrink}</h6>
                     <p className="m-0 text-secondary" style={{ fontSize: "12px" }}>
                         {strCategory}
                     </p>
                 </div>
                 <div className="card-footer px-1 d-flex justify-content-between">
-                    <div className="btn btn-outline btn-sm">View more</div>
-                    <div className="btn btn-outline  btn-sm">Add to cart</div>
+                    <div className="btn btn-dark  btn-sm">Add to cart</div>
                 </div>
             </div>
         </div>

@@ -35,6 +35,10 @@
     transition: 0.2s ease;
 }
 
+.category {
+    font-size: 64px !important;
+}
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -56,6 +60,13 @@ p {
     color: #cbcbcb;
 }
 
+.navbar {
+    width: 100%;
+    background-color: rgb(255, 255, 255) !important;
+    /* backdrop-filter: blur(25px); */
+    border-bottom: 1px solid rgb(198, 198, 198);
+    box-shadow: 2px 0 5px 1px rgb(178, 178, 178) !important;
+}
 
 .navbar a:hover {
     color: rgb(0, 0, 0) !important;
@@ -166,8 +177,13 @@ p {
 .navbar input {
     background-color: rgba(241, 241, 241, 0.684) !important;
     backdrop-filter: blur(35px);
-    padding: 5px 0px !important;
+    padding: 5px 10px !important;
     border: 1px solid gray !important;
+}
+
+input::placeholder {
+    text-align: center;
+    font-size: 14px !important;
 }
 
 .mobilesearchbar {
@@ -178,6 +194,8 @@ p {
     height: 35px;
     background-color: rgba(255, 255, 255, 0.65) !important;
     outline: none !important;
+    /* border-bottom: 2px solid rgb(50, 50, 50) !important; */
+    background-color: transparent !important;
 }
 
 .navbar input::placeholder {
@@ -193,12 +211,6 @@ p {
 
 
 
-.navbar {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.732) !important;
-    backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgb(198, 198, 198);
-}
 
 .navbar-toggler {
     border: none !important;
@@ -224,12 +236,6 @@ p {
     padding: 0 10px !important;
 }
 
-
-.loginBtn {
-    /* height: 10px !important; */
-    border-right: 2px solid rgb(138, 138, 138);
-
-}
 
 .mobileloginBtn {
     display: none;
@@ -293,7 +299,8 @@ p {
 }
 
 .swiper-slide .title {
-    font-size: 81px;
+    font-family: Rajdhani;
+    font-size: 88px;
     font-weight: 300;
     line-height: 70px;
     margin: 40px 0;
@@ -311,14 +318,9 @@ p {
 
 /* ===========================================COCKTAIL-PAGE======================================================= */
 
-.cocktails input::placeholder {
-    text-align: center;
-    font-size: 14px !important;
-}
-
-.products input::placeholder {
-    text-align: center;
-    font-size: 14px !important;
+.cocktailSearch {
+    border-bottom: 3px solid blue !important;
+    box-shadow: 1px 1px 3px 1px rgb(190, 190, 190);
 }
 
 /* ===========================================COCKTAIL-PAGE======================================================= */
@@ -326,19 +328,26 @@ p {
 .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
+    background-color: #121212;
     color: white;
 }
 
+ .webCart {
+     display: block !important;
+ }
 /* ===========================================MEDIA_QUERY======================================================= */
 
 
 @media (max-width: 576px) {
-.nav-flex{
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
+    .navbar {
+            
+            /* border-bottom: 1px solid rgb(198, 198, 198); */
+        }
+    .nav-flex {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
 
     .mobileCart {
         display: block;
@@ -360,10 +369,7 @@ p {
         margin-left: 0 !important;
         background-color: transparent !important;
     }
-        .mobilesearchbar input{
-        border-bottom: 1px solid gray !important;
-        background-color: transparent !important;
-        }
+
 
     .loginBtn {
         display: none;
@@ -371,6 +377,7 @@ p {
 
     .mobileloginBtn {
         display: block;
+        text-align: right;
     }
 
     .nav-items {
@@ -390,12 +397,13 @@ p {
     }
 
     .swiper-slide .title {
-        font-size: 44px;
-        margin: 10px 0;
+        font-size: 64px;
+        margin-top: 50px;
     }
 
     .swiper-slide .subtitle {
         font-size: 22px;
+        padding-bottom: 10px;
     }
 
     .swiper-slide .text {
