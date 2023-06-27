@@ -19,9 +19,9 @@ function Product() {
   return (
     <div className='container products py-5 mt-5'>
       <div className="d-flex justify-content-between search-head">
-        <h1 className="mb-2 fw-bolder category">Products</h1>
-        <div className="d-flex justify-content-center align-items-center">
-          <input type="text" placeholder="search products" className="cocktailSearch form-control border border-1 h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+        <h1 className="mb-2 fw-bolder category">Clothing</h1>
+        <div className=" cocktailSearch-outer d-flex justify-content-center align-items-center">
+          <input type="text" placeholder="search clothes" className="cocktailSearch form-control border border-1 h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
         </div>
       </div>
       <hr />
@@ -40,7 +40,7 @@ function Product() {
             <div className="bar10"></div>
             <div className="bar11"></div>
             <div className="bar12"></div>
-          </div>Loading...
+          </div>
         </div>
       }
       </div>

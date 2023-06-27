@@ -16,7 +16,7 @@ const productSlice = createSlice({
     name: "productSlice",
     initialState: {
         loading: true,
-        productList: []
+        productList: [],
     },
     reducers: {
 

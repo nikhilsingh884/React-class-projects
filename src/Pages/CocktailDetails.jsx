@@ -31,7 +31,7 @@ function CocktailDetails() {
                     <div className="bar10"></div>
                     <div className="bar11"></div>
                     <div className="bar12"></div>
-                </div>Loading...
+                </div>
             </div>
         }
         </div>
@@ -40,6 +40,7 @@ function CocktailDetails() {
     // console.log(cocktailDetails);
 
     return (
+        <div className="main-body">
         <div className='container container-details py-5 mt-5'>
             <div className='border border-2 rounded-3 shadow bg-bg-secondary-subtle'>
                 <div className="row">
@@ -71,6 +72,7 @@ function CocktailDetails() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

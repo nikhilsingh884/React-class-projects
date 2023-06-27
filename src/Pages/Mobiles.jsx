@@ -19,8 +19,8 @@ function Mobiles() {
         <div className='container mt-5 py-5'>
             <div className="d-flex justify-content-between search-head ">
                 <h1 className="mb-2 fw-bolder category">Mobiles & Laptops</h1>
-                <div className="d-flex justify-content-center align-items-center">
-                    <input type="text" placeholder="search" className="cocktailSearch form-control border border-1 h-50 " value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+                <div className="d-flex cocktailSearch-outer justify-content-center align-items-center">
+                    <input type="text" placeholder="search mobiles" className="cocktailSearch form-control border border-1 h-50 " value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
                 </div>
             </div>
             <hr />
@@ -39,7 +39,7 @@ function Mobiles() {
                         <div className="bar10"></div>
                         <div className="bar11"></div>
                         <div className="bar12"></div>
-                    </div>Loading...
+                    </div>
                 </div>
             }
             </div>

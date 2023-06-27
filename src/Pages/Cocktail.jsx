@@ -15,12 +15,12 @@ function Cocktail() {
 
 
   return (
-    <div className="container cocktails py-4 mt-5 ">
+    <div className="container mt-5 py-5 ">
       <div>
         <div className="d-flex justify-content-between search-head ">
-          <h1 className="mb-2 fw-bolder fs-1 category">Cocktails</h1>
-          <div className="d-flex justify-content-center align-items-center">
-            <input type="text" placeholder="search cocktails" className="cocktailSearch form-control border border-1 h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+          <h1 className="mb-2 fw-bolder category">Drinks</h1>
+          <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
+            <input type="text" placeholder="search drinks" className="cocktailSearch form-control border border-1 h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
           </div>
         </div>
         <hr />
@@ -40,7 +40,7 @@ function Cocktail() {
               <div className="bar10"></div>
               <div className="bar11"></div>
               <div className="bar12"></div>
-            </div>Loading...
+            </div>
           </div>
             }
         </div>

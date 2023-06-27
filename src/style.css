@@ -2,6 +2,8 @@
     font-family: Poppins;
 }
 
+.main-body {}
+
 /* .header-social .nav-sub {
     display: flex;
     justify-content: space-between;
@@ -61,6 +63,8 @@ p {
 }
 
 .navbar {
+    position: fixed !important;
+    top: 0;
     width: 100%;
     background-color: rgb(255, 255, 255) !important;
     /* backdrop-filter: blur(25px); */
@@ -80,6 +84,17 @@ p {
     background-color: #000000b1;
     backdrop-filter: blur(25px);
 } */
+.logo {
+    margin-right: 30px !important;
+}
+
+.ham-social {
+    display: none !important;
+    width: 100% !important;
+
+}
+
+
 .loader {
     position: relative;
     width: 54px;
@@ -88,8 +103,9 @@ p {
 }
 
 .loader div {
+    margin-top: 100px !important;
     width: 8%;
-    height: 24%;
+    height: 48%;
     background: rgb(128, 128, 128);
     position: absolute;
     left: 50%;
@@ -319,8 +335,12 @@ input::placeholder {
 /* ===========================================COCKTAIL-PAGE======================================================= */
 
 .cocktailSearch {
-    border-bottom: 3px solid blue !important;
+    border-bottom: 3px solid rgb(0, 0, 0) !important;
     box-shadow: 1px 1px 3px 1px rgb(190, 190, 190);
+}
+
+.cocktailSearch-outer {
+    width: 25%;
 }
 
 /* ===========================================COCKTAIL-PAGE======================================================= */
@@ -332,17 +352,32 @@ input::placeholder {
     color: white;
 }
 
- .webCart {
-     display: block !important;
- }
+.webCart {
+    display: block !important;
+}
+
+/* ==================================================================================================================== */
+
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
 /* ===========================================MEDIA_QUERY======================================================= */
 
 
 @media (max-width: 576px) {
+    .logo {
+        margin-right: 0px !important;
+        margin-left: 10px;
+    }
+
     .navbar {
-            
-            /* border-bottom: 1px solid rgb(198, 198, 198); */
-        }
+
+        /* border-bottom: 1px solid rgb(198, 198, 198); */
+    }
+
     .nav-flex {
         display: flex !important;
         justify-content: space-between !important;
@@ -382,8 +417,22 @@ input::placeholder {
 
     .nav-items {
         margin: 15px 0;
-        border-radius: 10px;
+        border-radius: 0px;
         padding: 0 10px;
+    }
+
+    .ham-social {
+        background-color: rgb(231, 231, 231);
+        display: flex !important;
+        justify-content: space-between;
+        /* gap: 20px !important; */
+        font-size: 18px !important;
+        border-radius: 5px;
+    }
+
+    .ham-social a {
+        color: rgb(57, 57, 57) !important;
+        font-size: 22px !important;
     }
 
     .swiper {
@@ -416,5 +465,14 @@ input::placeholder {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .cocktailSearch-outer {
+        width: 100%;
+    }
+
+    .cocktailSearch {
+        margin-top: 30px !important;
+        width: 100% !important;
     }
 }

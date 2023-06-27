@@ -33,7 +33,7 @@ function MobilesDetails() {
                     <div className="bar10"></div>
                     <div className="bar11"></div>
                     <div className="bar12"></div>
-                </div>Loading...
+                </div>
             </div>
         }
         </div>

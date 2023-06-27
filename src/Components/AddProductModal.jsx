@@ -5,19 +5,24 @@ import DialogTitle from '@mui/material/DialogTitle';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string, number } from 'yup';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../Redux/InventorySlice';
 
 
-function AddProductModal({ open, handleClose }) {
 
+
+function AddProductModal({ open, handleClose }) {
+  let {addProductLoading,error}= useSelector((state)=>state.inventory)
   const dispatch = useDispatch();
 
   function formSubmit(value) {
 
     console.log("value", value);
     dispatch(addProduct({ formValue: value, handleClose: handleClose }));
+    
   }
+  
+
 
   const initialValues =
   {
@@ -37,7 +42,7 @@ function AddProductModal({ open, handleClose }) {
 
   return (
     <div>
-      <Dialog maxWidth="sm" fullWidth open={open} onClose={handleClose}>
+      <Dialog maxWidth="sm" fullWidth open={open} >
         <div className="bg-light d-flex justify-content-between align-items-center pe-4">
           <DialogTitle className='fs-2  fw-bold'>Fill product details</DialogTitle>
           <CloseOutlinedIcon onClick={handleClose} />
@@ -91,9 +96,13 @@ function AddProductModal({ open, handleClose }) {
                   name="qty"
                     component="div"
                   />
-
+                  <p className='text-danger'>
+                  {error}
+                </p>
                 <button className='btn-primary btn w-100 mb-3' type='submit'>
-                  Add to inventory
+                  {
+                    addProductLoading ? "adding.." :"Add to inventory"
+                  }
                 </button>
 
               </Form>
@@ -101,6 +110,7 @@ function AddProductModal({ open, handleClose }) {
           }
           </Formik>
         </DialogContent>
+        
       </Dialog>
     </div>
   )
