@@ -1,10 +1,9 @@
-// import React, { useRef } from 'react'
+import React from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import logo from "../Images/cyan-logo.png"
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../Redux/authSlice';
-import '../Home.js'
-
+import '../Home'
 
 
 function Navbar() {
@@ -13,17 +12,9 @@ function Navbar() {
     const dispatch = useDispatch();
     const { isLogin } = useSelector((state) => state.auth)
 
-    // const navRef=useRef(null);
-
-    // const collapsedNav=()=>{
-    //     navRef.current.classlist.add('collapsed')
-    // }
-
     if (data.pathname === '/login' || data.pathname === '/signup') {
         return null
     }
-
-    
 
     return (
         <div>
@@ -48,7 +39,7 @@ function Navbar() {
 
                     <div className="container-fluid  py-2   ">
 
-                        <button className="navbar-toggler nav-icon " type="button"data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
                         <div className='logo' onClick={() => (navigate("/"))}> <img src={logo} style={{ height: "35px", width: "70px" }} alt="" /></div>
@@ -59,34 +50,34 @@ function Navbar() {
                             }
                         </div></div>
                         <div className="collapse navbar-collapse " id="navbarNav">
-                            <div  className='mobilesearchbar'>
+                            <div className='mobilesearchbar'>
                                 <input className='form-control rounded-1 border-dark' placeholder='search products' type="text" />
                             </div>
                             <ul className="navbar-nav px-1">
-                                <li  className="nav-item text-center">
+                                <li className="nav-item text-center">
                                     <NavLink className="nav-link" to="/Mobiles">Mobiles & Laptops</NavLink>
                                 </li>
                                 <hr className='my-0' />
 
-                                <li  className="nav-item text-center">
+                                <li className="nav-item text-center">
                                     <NavLink className="nav-link" to="/Product">Clothing</NavLink>
                                 </li>
 
                                 <hr className='my-0' />
-                                <li  className="nav-item text-center">
+                                <li className="nav-item text-center">
                                     <NavLink className="nav-link" to="/Cocktail"> Drinks </NavLink>
                                 </li>
                                 <hr className='my-0' />
 
-                                <li  className="nav-item text-center">
+                                <li className="nav-item text-center">
                                     <NavLink className="nav-link " to="/inventory">Admin Inventory</NavLink>
                                 </li>
                                 <hr className='my-0' />
-                                <li  className="nav-item text-center">
+                                <li className="nav-item text-center">
                                     <NavLink className="nav-link " to="/about">About</NavLink>
                                 </li>
                                 <hr className='my-0' />
-                                <li  className="nav-item text-center">
+                                <li className="nav-item text-center">
                                     <NavLink className="nav-link " to="/Help">Help</NavLink>
                                 </li>
                                 <hr className='my-0 ham-hr' />

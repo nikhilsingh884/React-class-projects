@@ -13,7 +13,6 @@ import Mobiles from "./Pages/Mobiles";
 import MobilesDetails from "./Pages/MobilesDetails";
 import Inventory from "./Pages/Inventory";
 import BottomBar from "./Components/BottomBar";
-import "../src/Home.js"
 
 
 
