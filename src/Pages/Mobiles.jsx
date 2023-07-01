@@ -20,10 +20,9 @@ function Mobiles() {
             <div className="d-flex justify-content-between search-head ">
                 <h1 className="mb-2 fw-bolder category">Mobiles & Laptops</h1>
                 <div className="d-flex cocktailSearch-outer justify-content-center align-items-center">
-                    <input type="text" placeholder="search mobiles" className="cocktailSearch form-control border border-1 h-50 " value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+                    <input type="text" placeholder="search mobiles" className="form-control border border-1 rounded-0 border-dark h-50 " value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
                 </div>
             </div>
-            <hr />
             <div className="container d-flex justify-content-center align-items-center  pt-5">{
                 loading && <div>
                     <div className="loader">
@@ -54,7 +53,7 @@ function Mobiles() {
                                 <div className="card-body text-truncate">
                                     {title}
                                     <p className='text-truncate' title={description}>{description}</p>
-                                    <button className='btn btn-dark btn-sm'>Buy Now</button>
+                                    <button className='btn btn-dark btn-sm w-100'>Buy Now</button>
                                 </div>
                             </div>
                         </div>

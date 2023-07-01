@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Parallax, Autoplay } from 'swiper';
 import { useNavigate } from 'react-router';
 import hero from "../Images/5504500.jpg"
+import Cart from './Cart';
 
 function Home() {
   const navigate = useNavigate()
@@ -41,7 +42,7 @@ function Home() {
           </div>
           <SwiperSlide className='mt-5'>
             <div className="slide ">
-              <div className="title text-info" data-swiper-parallax="-300">
+              <div className="title " data-swiper-parallax="-300">
                 Mobile Phones
               </div>
               <div className="subtitle" data-swiper-parallax="-200">
@@ -57,7 +58,7 @@ function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide className='mt-5'>
-            <div className="title text-danger" data-swiper-parallax="-300">
+            <div className="title" data-swiper-parallax="-300">
               Laptops
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
@@ -74,7 +75,7 @@ function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide className='mt-5'>
-            <div className="title text-warning" data-swiper-parallax="-300">
+            <div className="title" data-swiper-parallax="-300">
               Clothing
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
@@ -105,10 +106,62 @@ function Home() {
           </path>
         </svg>
       </div> */}
-      <div style={{ paddingTop: "120px" }} className="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eveniet? Beatae, non quam explicabo ex sunt temporibus doloribus perferendis! Nostrum officia omnis consequatur beatae quo, voluptates est quos, molestiae error at iure facere deleniti odit? Minima aliquid sit, quasi quis quas architecto necessitatibus obcaecati atque autem nihil at, cum exercitationem recusandae hic, doloribus et unde nostrum? Quisquam eum corrupti quia fuga nemo minima libero inventore possimus? Ratione rerum ea magni, molestias odit voluptates ab. Qui eos laborum cupiditate inventore nulla sed, ducimus ullam. Natus nostrum quasi necessitatibus esse aliquam neque quibusdam fuga quaerat ut, enim commodi similique quam quos dolores autem hic? Reprehenderit voluptas aliquid animi culpa cupiditate porro consectetur nulla cumque hic velit, eius perspiciatis sit a, quod voluptatibus accusamus non impedit possimus! Vero blanditiis consequuntur fuga qui eligendi quis quos magnam aliquid quia, porro repudiandae repellendus itaque neque, architecto omnis dignissimos consectetur reiciendis molestiae soluta, eos nobis labore reprehenderit. Architecto, obcaecati quidem? Fuga asperiores corrupti nobis dicta repellat vero qui possimus, enim iure recusandae ea. Ipsa quae culpa dolor explicabo sed. Ratione odio tempora assumenda voluptate maxime inventore fuga cumque eos qui totam dolor itaque at, impedit veniam, doloribus vitae hic corporis! Cum ab esse maxime cupiditate asperiores tempora nobis, ea et eligendi repellat voluptate dolore unde dolores id libero illum eius pariatur, numquam enim dolor omnis? Illum, dicta ad? Magnam, eligendi aspernatur dolorum officiis deleniti harum, nemo sunt doloremque totam reiciendis soluta asperiores! Modi nulla quasi quaerat officia explicabo eius cupiditate facilis doloremque, quos totam illo iste sit dolor eaque aliquid nam. Nulla eaque inventore molestias dolor officia iusto explicabo nihil. Provident inventore nemo error eos facilis, saepe ut esse atque voluptate iste earum autem in nostrum reprehenderit praesentium tempora obcaecati fuga consequuntur mollitia quae nobis, iure expedita. Ipsum iusto deleniti sed in perferendis, aperiam obcaecati doloribus mollitia. Praesentium animi repudiandae omnis. Laboriosam sequi, autem nam excepturi libero esse saepe rem tempore laudantium totam itaque hic, velit deserunt quos perspiciatis molestias cupiditate vero quas commodi quibusdam. Ex ea aliquam veritatis asperiores sint ab assumenda exercitationem molestias odio odit, laborum animi, quisquam numquam dolorum rem alias quos veniam at. Debitis, sequi? Itaque quos enim, deleniti ea autem, iure quam illo ipsam laborum quae magni nisi quas, animi distinctio expedita dolore impedit obcaecati nobis rem temporibus sapiente. Aut sit unde est, quam harum ad. Nulla, dolorem eligendi laboriosam quasi, blanditiis commodi consequuntur est explicabo eum repellat temporibus iure modi quis corporis deserunt corrupti reiciendis fuga dolore! Quae necessitatibus praesentium ipsum at eaque, ducimus quasi, nemo obcaecati beatae id rerum sapiente possimus nisi illum sint corporis dolor culpa natus esse iusto sequi! Autem, officia tempora, id repudiandae deserunt reprehenderit consequuntur quia maxime facilis inventore impedit cum beatae similique exercitationem nostrum molestias debitis quam ad! Praesentium nulla, alias harum debitis esse sapiente quo cumque omnis corporis officia iste, dolores possimus delectus! Temporibus, vitae iusto. Nam nesciunt qui animi corporis eaque pariatur excepturi laboriosam veniam ullam voluptates, perspiciatis repellendus voluptatum doloribus deserunt laudantium odit. Possimus, quam. Magni unde labore sit optio quod!
-      </div>
+      <div className="gradient-bg">
 
+        <section id="scroll">
+          <div class="container highlights px-5 px-sm-0">
+            <div class="row gx-5 align-items-center">
+              <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt="..." /></div>
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div class="p-5 highlight-text">
+                  <h2 class="display-4">For those about to rock...</h2>
+                  <p className='text-dark'>Unleash the power of immersive sound with our premium speakers. Elevate your online shopping experience and indulge in crystal-clear audio like never before.</p>
+                  <button className='learnMoreBtn mt-3'>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div>
+          <section>
+            <div className="container highlights  px-5">
+              <div className="row gx-5 align-items-center">
+                <div className="col-lg-6">
+                  <div className="p-5"><img className="img-fluid rounded-circle" src="assets/img/02.jpg" alt="..." /></div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="p-5 highlight-text">
+                    <h2 className="display-4">We salute you!</h2>
+                    <p className='text-dark'>Discover the perfect companion for your digital lifestyle with our cutting-edge mobile phones. Experience seamless performance and stunning features that redefine mobile technology.</p>
+                    <button className='learnMoreBtn mt-3'>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* Content section 3*/}
+          <section>
+            <div className="container highlights  px-5">
+              <div className="row gx-5 align-items-center">
+                <div className="col-lg-6 order-lg-2">
+                  <div className="p-5"><img className="img-fluid rounded-circle" src="assets/img/03.jpg" alt="..." /></div>
+                </div>
+                <div className="col-lg-6 order-lg-1">
+                  <div className="p-5  highlight-text">
+                    <h2 className="display-4">Let there be rock!</h2>
+                    <p className='text-dark'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                    <button className='learnMoreBtn mt-3'>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </div>
 
     </div>
   )

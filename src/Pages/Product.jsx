@@ -21,10 +21,9 @@ function Product() {
       <div className="d-flex justify-content-between search-head">
         <h1 className="mb-2 fw-bolder category">Clothing</h1>
         <div className=" cocktailSearch-outer d-flex justify-content-center align-items-center">
-          <input type="text" placeholder="search clothes" className="cocktailSearch form-control border border-1 h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+          <input type="text" placeholder="search clothes" className="form-control border border-1 rounded-0 border-dark h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
         </div>
       </div>
-      <hr />
       <div className="container d-flex justify-content-center align-items-center">{
         loading && <div>
           <div className="loader">

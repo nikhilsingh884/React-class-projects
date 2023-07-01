@@ -17,11 +17,12 @@ function CocktailCard({ item }) {
                     </p>
                 </div>
                 <div className="card-footer px-1 d-flex justify-content-between">
-                    <div className="btn btn-dark  btn-sm">Add to cart</div>
+                    <div className=" btn btn-outline-dark btn-sm">Add to cart</div>
                 </div>
             </div>
         </div>
     );
 }
+
 
 export default CocktailCard

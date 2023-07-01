@@ -20,10 +20,9 @@ function Cocktail() {
         <div className="d-flex justify-content-between search-head ">
           <h1 className="mb-2 fw-bolder category">Drinks</h1>
           <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
-            <input type="text" placeholder="search drinks" className="cocktailSearch form-control border border-1 h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+            <input type="text" placeholder="search drinks" className=" form-control border border-1 rounded-0 border-dark h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
           </div>
         </div>
-        <hr />
 
         <div className="container d-flex justify-content-center align-items-center  pt-5">{
           loading && <div>

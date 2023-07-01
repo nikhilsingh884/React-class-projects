@@ -12,6 +12,8 @@ import About from "./Pages/About";
 import Mobiles from "./Pages/Mobiles";
 import MobilesDetails from "./Pages/MobilesDetails";
 import Inventory from "./Pages/Inventory";
+import BottomBar from "./Components/BottomBar";
+import "../src/Home.js"
 
 
 
@@ -36,6 +38,7 @@ function App() {
                 <Route path="/about" element={<About />} />
 
             </Routes>
+            <BottomBar/>
         </>
     )
 }

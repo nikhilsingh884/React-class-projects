@@ -14,7 +14,7 @@ function Inventory() {
     const [open, setOpen] = useState(false);
     const [editOpen, setEditOpen] = useState(false);
     const [editValue, setEditValue] = useState({});
-    const [searchText, setSearchText]= useState("")
+    const [searchText, setSearchText]= useState("");
 
     useEffect(() => {
         dispatch(getInventory());
@@ -22,9 +22,8 @@ function Inventory() {
     }, [])
 
     useEffect(()=>{
-        if (searchText){
             dispatch(searchInventory(searchText))
-        }
+        
     },[searchText])
 
     const handleClickOpen = () => {
@@ -53,13 +52,14 @@ function Inventory() {
                 <EditProductModal editOpen={editOpen} editHandleClose={editHandleClose} editValue={editValue} />
 
                 <h1 className='text-center mb-5 fw-bolder'>Available inventory in store</h1>
+                <hr />
 
-                <div className='d-flex justify-content-between align-items-center mb-4'>
+                <div className='d-flex justify-content-between align-items-center my-4'>
 
                     <input type="text" placeholder='search products' className=' form-control border border-1 rounded-0 border-dark w-25' onChange={(e) => setSearchText(e.target.value)} value={searchText} />
 
                     <div className="text-end">
-                        <Button size='small' className='text-capitalize rounded-0' variant="contained" onClick={handleClickOpen}>Add Product</Button>  
+                        <Button size='lg' className='text-capitalize rounded-0' variant="contained" onClick={handleClickOpen}>Add Product +</Button>  
                     </div>
                     
                 </div>
@@ -108,7 +108,7 @@ function Inventory() {
                                         <td style={{ fontSize: "14px" }}>{price}</td>
                                         <td style={{ fontSize: "14px" }}>{qty}</td>
                                         <td className='d-flex justify-content-between '>
-                                            <button className="btn btn-sm btn-primary w-50 me-1" onClick={() => handleEditOpen(item)}>Edit</button>
+                                            <button className="btn btn-sm btn-primary  w-50 me-1" onClick={() => handleEditOpen(item)}>Edit</button>
                                             <button className="btn btn-sm btn-danger w-50" onClick={() => dispatch(deleteProduct({ id: _id }))}>Delete</button></td>
                                     </tr>
                                 })

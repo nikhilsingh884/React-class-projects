@@ -50,31 +50,41 @@
     border-top-right-radius: 5px;
 }
 
+.navbar {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    border-bottom: none;
+    background-color: rgb(255, 255, 255) !important;
+    /* backdrop-filter: blur(25px); */
+}
+.bg-blur{
+    background-color: rgba(255, 255, 255, 0.875) !important;
+    backdrop-filter: blur(25px);
+}
+
 .navbar a {
+    border: 1px solid transparent;
+    border-radius: 50px;
     position: relative;
     font-size: 14px !important;
     color: rgb(82, 82, 82) !important;
     font-weight: 400 !important;
     transition: 0.1s ease !important;
+    padding: 12px 20px !important;
+}
+
+.navbar a:hover {
+    color: rgb(0, 0, 0) !important;
+    border: 1px solid gray;
 }
 
 p {
     color: #cbcbcb;
 }
 
-.navbar {
-    position: fixed !important;
-    top: 0;
-    width: 100%;
-    background-color: rgb(255, 255, 255) !important;
-    /* backdrop-filter: blur(25px); */
-    border-bottom: 1px solid rgb(198, 198, 198);
-    box-shadow: 2px 0 5px 1px rgb(178, 178, 178) !important;
-}
 
-.navbar a:hover {
-    color: rgb(0, 0, 0) !important;
-}
+
 
 /* .marquee{
     position: absolute;
@@ -91,9 +101,32 @@ p {
 .ham-social {
     display: none !important;
     width: 100% !important;
+}
+
+.learnMoreBtn {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    border: 1px solid black !important;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.arrow {
+    transform: translateX(-7px);
+    transition: 0.4s ease;
+}
+
+.learnMoreBtn:hover {
+    background-color: rgb(244, 244, 244);
 
 }
 
+.learnMoreBtn:hover .arrow {
+    transform: translateX(5px);
+
+}
 
 .loader {
     position: relative;
@@ -186,9 +219,6 @@ p {
 }
 
 /* ===========================================NAVBAR======================================================= */
-.mobileCart {
-    display: none;
-}
 
 .navbar input {
     background-color: rgba(241, 241, 241, 0.684) !important;
@@ -245,11 +275,6 @@ input::placeholder {
     border-radius: 30px;
     border: 1px solid rgb(217, 217, 217);
     background-color: rgba(241, 241, 241, 0.532) !important;
-
-}
-
-.nav-items li {
-    padding: 0 10px !important;
 }
 
 
@@ -335,14 +360,43 @@ input::placeholder {
 /* ===========================================COCKTAIL-PAGE======================================================= */
 
 .cocktailSearch {
-    border-bottom: 3px solid rgb(0, 0, 0) !important;
-    box-shadow: 1px 1px 3px 1px rgb(190, 190, 190);
+    /* border-bottom: 3px solid rgb(0, 0, 0) !important;
+    box-shadow: 1px 1px 3px 1px rgb(190, 190, 190); */
 }
 
 .cocktailSearch-outer {
     width: 25%;
 }
 
+/* ======================================hightlights================================================== */
+
+/* .gradient-bg {
+    padding: 10px 0px !important;
+    background-image: linear-gradient(to right, #ffafbd, #fffc9b, #b5feba, #fcacff);
+    background-size: 200% 100%;
+    animation: gradientAnimation 4s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+/* .highlights{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.559);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+} */
 /* ===========================================COCKTAIL-PAGE======================================================= */
 
 .about-section {
@@ -352,9 +406,6 @@ input::placeholder {
     color: white;
 }
 
-.webCart {
-    display: block !important;
-}
 
 /* ==================================================================================================================== */
 
@@ -364,19 +415,57 @@ canvas {
     height: 100%;
 }
 
+.whatsapp-main {
+    display: none !important;
+}
+
 /* ===========================================MEDIA_QUERY======================================================= */
 
 
 @media (max-width: 576px) {
+
+
+    /* 
+        .bottom-icon{
+            position: relative;
+        }
+    .bottom-icon::after{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 10px;
+        background: gray;
+        margin-left: 15px;
+    } */
+
     .logo {
         margin-right: 0px !important;
         margin-left: 10px;
     }
 
     .navbar {
-
-        /* border-bottom: 1px solid rgb(198, 198, 198); */
+        padding: 10px 0 !important;
+        /* border-bottom: 1px solid rgb(0, 0, 0); */
+        /* border-radius: 3px !important; */
+        --bs-navbar-padding-y: 0rem !important;
     }
+
+    .navbar a {
+        border: none !important;
+    }
+
+    .navbar li:hover {
+        background-color: rgb(244, 244, 244);
+    }
+
+    .nav-items a {
+        padding: 20px 0px !important;
+    }
+
+    .ham-hr {
+        background-color: black !important;
+    }
+
 
     .nav-flex {
         display: flex !important;
@@ -384,14 +473,7 @@ canvas {
         align-items: center !important;
     }
 
-    .mobileCart {
-        display: block;
-    }
 
-
-    .webCart {
-        display: none !important;
-    }
 
     .searchbar {
         display: none;
@@ -422,17 +504,15 @@ canvas {
     }
 
     .ham-social {
-        background-color: rgb(231, 231, 231);
         display: flex !important;
         justify-content: space-between;
-        /* gap: 20px !important; */
         font-size: 18px !important;
-        border-radius: 5px;
     }
 
     .ham-social a {
         color: rgb(57, 57, 57) !important;
         font-size: 22px !important;
+        /* padding-top: 15px !important; */
     }
 
     .swiper {
@@ -440,7 +520,7 @@ canvas {
     }
 
     .swiper-slide {
-        height: 100vh !important;
+        height: 80vh !important;
         font-size: 18px;
         padding: 40px 30px;
     }
@@ -475,4 +555,53 @@ canvas {
         margin-top: 30px !important;
         width: 100% !important;
     }
+
+    .highlights-container {
+        background: url(Images/layer1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 50px !important;
+    }
+
+    .highlights {
+        padding: 10px !important;
+    }
+
+    .highlight-text {
+        padding: 0px 5px !important;
+    }
+
+    .whatsapp-order {
+        position: fixed;
+        z-index: 11;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.846);
+        backdrop-filter: blur(25px);
+        box-shadow: 0 2px 5px 1px rgb(55, 55, 55);
+        /* border-top: 1px solid black !important; */
+    }
+
+    .whatsapp-order p {
+        font-size: 14px !important;
+    }
+
+    .whatsapp-main {
+        display: block !important;
+    }
+
+    .cart-icon {
+        position: relative;
+    }
+
+    .cart-badge {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: -10px;
+        right: -15px;
+        font-size: 10px !important;
+    }
+
 }

@@ -17,7 +17,7 @@ export const getInventory = createAsyncThunk("getInventory", async () => {
 
 // ===================post-inventory==============================================================================
 
-export const addProduct= createAsyncThunk("addProduct", async({formValue, handleClose}, {dispatch})=>{
+export const addProduct = createAsyncThunk("addProduct", async ({ formValue, handleClose }, { dispatch }) => {
     dispatch(startAddLoading())
     try {
         const response = await axios.post(`http://localhost:8000/product`, formValue);
@@ -25,15 +25,15 @@ export const addProduct= createAsyncThunk("addProduct", async({formValue, handle
             handleClose();
             dispatch((getInventory()));
         }
-        dispatch(stopAddLoading())        
-    } 
+        dispatch(stopAddLoading())
+    }
     catch (error) {
-        if (error.response.data.message === "Duplicate field value"){
-            
-            error.response.data.message="Product already exists in inventory"
+        if (error.response.data.message === "Duplicate field value") {
+
+            error.response.data.message = "Product already exists in inventory"
         }
 
-        console.log("error",error);
+        console.log("error", error);
         dispatch(stopAddLoading())
         dispatch(addErrorMsg(error.response.data.message))
     }
@@ -43,24 +43,24 @@ export const addProduct= createAsyncThunk("addProduct", async({formValue, handle
 
 
 
-export const deleteProduct= createAsyncThunk("deleteProduct", async({id}, {dispatch})=>{
+export const deleteProduct = createAsyncThunk("deleteProduct", async ({ id }, { dispatch }) => {
     try {
         const response = await axios.delete(`http://localhost:8000/product/${id}`)
-        if (response.status === 200){
+        if (response.status === 200) {
             dispatch(getInventory());
             alert("Deleted succuesfully")
         }
     } catch (error) {
-        console.log("error",error);
+        console.log("error", error);
     }
 })
 
 // ===================update-inventory==============================================================================
 
-export const updateProduct=createAsyncThunk('updateProduct', async({formValue, editHandleClose},{dispatch})=>{
+export const updateProduct = createAsyncThunk('updateProduct', async ({ formValue, editHandleClose }, { dispatch }) => {
     try {
-        const{_id,name, qty, price, category}=formValue;
-        const id=_id;
+        const { _id, name, qty, price, category } = formValue;
+        const id = _id;
         const data = {
             name,
             qty,
@@ -68,8 +68,8 @@ export const updateProduct=createAsyncThunk('updateProduct', async({formValue, e
             category
         }
 
-        const response =await axios.patch(`http://localhost:8000/product/${id}`,data)
-        if(response.status===200){
+        const response = await axios.patch(`http://localhost:8000/product/${id}`, data)
+        if (response.status === 200) {
             dispatch(getInventory())
             dispatch(editHandleClose())
 
@@ -86,36 +86,36 @@ const inventorySlice = createSlice({
         loading: false,
         inventoryList: [],
         filterInventoryList: [],
-        addProductLoading:false,
-        error:""
+        addProductLoading: false,
+        error: ""
 
     },
-    reducers:{
-        startAddLoading:(state,action)=>{
-            state.addProductLoading=true
+    reducers: {
+        startAddLoading: (state, action) => {
+            state.addProductLoading = true
         },
         stopAddLoading: (state, action) => {
             state.addProductLoading = false
         },
-        addErrorMsg:(state,action)=>{
-            state.error=action.payload
+        addErrorMsg: (state, action) => {
+            state.error = action.payload
         },
-        removeErrorMsg:(state,action)=>{
-            state.error=""
+        removeErrorMsg: (state, action) => {
+            state.error = ""
         },
         searchInventory: (state, action) => {
-            const searchData = state.inventoryList.filter((item) => item.name.toLowerCase().includes(action.payload.toLowerCase()))
+            const searchData = state.inventoryList.filter((item) => item.name.replace(" ", "").toLowerCase().includes(action.payload.toLowerCase()))
             state.filterInventoryList = searchData
         }
     },
- 
+
     extraReducers: {
         [getInventory.pending]: (state, action) => {
             state.loading = false
         },
         [getInventory.fulfilled]: (state, action) => {
             state.loading = false
-            state.inventoryList = action.payload.products 
+            state.inventoryList = action.payload.products
             state.filterInventoryList = action.payload.products;
 
         },
@@ -125,5 +125,5 @@ const inventorySlice = createSlice({
     }
 
 })
-export const { startAddLoading, stopAddLoading, addErrorMsg, removeErrorMsg, searchInventory }=inventorySlice.actions
+export const { startAddLoading, stopAddLoading, addErrorMsg, removeErrorMsg, searchInventory } = inventorySlice.actions
 export default inventorySlice.reducer

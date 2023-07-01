@@ -62,6 +62,8 @@ function EditProductModal({ editOpen, editHandleClose, editValue }) {
                                     <option value="select">----select----</option>
                                     <option value="Mobiles">Mobiles</option>
                                     <option value="Laptops">Laptops</option>
+                                    <option value="Electronics">Electronics</option>
+
                                     <option value="Watches">Watches</option>
                                     <option value="Clothes">Clothes</option>
                                     <option value="Footwear">Footwear</option>
