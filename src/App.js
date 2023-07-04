@@ -1,6 +1,5 @@
 
-import ArrayList from "./ArrayList";
-import IncDec from "./IncDec";
+import MainContent from "./Components/MainContent";
 
 
 
@@ -9,8 +8,8 @@ function App() {
 
     return (
         <>
-            <ArrayList />
-            <IncDec />
+
+            <MainContent />
         </>
     )
 }
