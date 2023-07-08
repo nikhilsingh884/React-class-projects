@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getMobilesList } from '../Redux/MobilesSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router';
+import MobilesCard from '../Components/MobilesCard';
 
 function Mobiles() {
 
@@ -18,7 +19,7 @@ function Mobiles() {
     return (
         <div className='container mt-5 py-5'>
             <div className="d-flex justify-content-between search-head ">
-                <h1 className="mb-2 fw-bolder category">Mobiles & Laptops</h1>
+                <h1 className="mb-2 fw-lighter category">Mobiles & Laptops</h1>
                 <div className="d-flex cocktailSearch-outer justify-content-center align-items-center">
                     <input type="text" placeholder="search mobiles" className="form-control border border-1 rounded-0 border-dark h-50 " value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
                 </div>
@@ -43,22 +44,13 @@ function Mobiles() {
             }
             </div>
             <div className="row">
-                {mobilesList.map((item, index) => {
-                    const { thumbnail, title, description, id } = item;
 
-                    return (
-                        <div className="col-md-2 col-6 mb-4 ">
-                            <div style={{ cursor: "pointer" }} key={index} className="card phones-card mb-4 shadow" onClick={() => navigate(`/mobiles/${id}`)}>
-                                <img src={thumbnail} style={{ height: "200px" }} alt="" />
-                                <div className="card-body text-truncate">
-                                    {title}
-                                    <p className='text-truncate' title={description}>{description}</p>
-                                    <button className='btn btn-dark btn-sm w-100'>Buy Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
+                {
+                    mobilesList &&
+                    mobilesList.map((item, index) => {
+                        return <MobilesCard key={index} item={item} />
+
+                    })}
             </div>
 
         </div>

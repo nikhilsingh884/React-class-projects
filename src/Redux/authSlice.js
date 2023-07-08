@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+import { Link, useNavigate } from "react-router-dom"
 
 function getLocalStorage(){
     const isLogin= localStorage.getItem("appLogin")
@@ -85,11 +86,13 @@ const authSlice = createSlice({
 
             // state.errorMsg=action.payload;
         },
-        logout:(state,action)=>{
-            alert("Logout?")
-            state.isLogin=false
-            localStorage.removeItem("appLogin");
+        logout: (state, action) => {
+            if (window.confirm('Are you sure you want to logout?')) {
+                state.isLogin = false;
+                localStorage.removeItem('appLogin');
+            }
         }
+
     }
 })
 export const { startLoading, loginSuccess, loginFail,logout } = authSlice.actions;

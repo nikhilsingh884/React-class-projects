@@ -5,8 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Parallax, Autoplay } from 'swiper';
 import { useNavigate } from 'react-router';
-import hero from "../Images/5504500.jpg"
-import Cart from './Cart';
+import hero from "../Images/sony-cam.jpg"
 
 function Home() {
   const navigate = useNavigate()
@@ -42,7 +41,7 @@ function Home() {
           </div>
           <SwiperSlide className='mt-5'>
             <div className="slide ">
-              <div className="title " data-swiper-parallax="-300">
+              <div className="title" data-swiper-parallax="-300">
                 Mobile Phones
               </div>
               <div className="subtitle" data-swiper-parallax="-200">
@@ -53,10 +52,29 @@ function Home() {
                   Discover the latest collection of cutting-edge mobile phones at our ecommerce store.  Whether you're an avid photographer, a multitasker, or a gaming enthusiast, we have the perfect mobile phone to suit your needs.
                 </p>
                 <hr />
-                <div className="btn btn-outline-light" onClick={() => navigate('/mobiles')}>Browse mobile phones</div>
+                <div className="btn btn-light rounded-5  btn-lg" onClick={() => navigate('/mobiles')}>Browse mobiles</div>
               </div>
             </div>
           </SwiperSlide>
+
+          <SwiperSlide className='mt-5'>
+            <div className="slide ">
+              <div className="title " data-swiper-parallax="-300">
+                Cocktail Drinks
+              </div>
+              <div className="subtitle" data-swiper-parallax="-200">
+                with mouth watering flavours and unique blends
+              </div>
+              <div className="text" data-swiper-parallax="-100">
+                <p className='fw-light'>
+                  Indulge in the art of mixology with our handcrafted cocktails, blending premium spirits with fresh ingredients for a taste sensation.
+                </p>
+                <hr />
+                <div className="btn btn-light rounded-5 btn-lg" onClick={() => navigate('/cocktail')}>Browse cocktails</div>
+              </div>
+            </div>
+          </SwiperSlide>
+
           <SwiperSlide className='mt-5'>
             <div className="title" data-swiper-parallax="-300">
               Laptops
@@ -70,7 +88,7 @@ function Home() {
               </p>
               <hr />
 
-              <div className="btn btn-outline-light" onClick={() => navigate('/mobiles')}>Browse laptops</div>
+              <div className="btn btn-light rounded-5 btn-lg" onClick={() => navigate("/mobiles")}>Browse laptops</div>
 
             </div>
           </SwiperSlide>
@@ -87,7 +105,7 @@ function Home() {
               </p>
               <hr />
 
-              <div className="btn btn-outline-light" onClick={() => navigate('/Product')}>Browse Clothing</div>
+              <div className="btn btn-light rounded-5 btn-lg" onClick={() => navigate('/Product')}>Browse clothing</div>
 
             </div>
           </SwiperSlide>
@@ -108,17 +126,17 @@ function Home() {
       </div> */}
       <div className="gradient-bg">
 
-        <section id="scroll">
-          <div class="container highlights px-5 px-sm-0">
-            <div class="row gx-5 align-items-center">
-              <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt="..." /></div>
+        <section id="scroll" className=''>
+          <div className="container highlights px-5 px-sm-0">
+            <div className="row  align-items-center mx-0">
+              <div className="col-lg-6 order-lg-2 p-0">
+                <div className="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt="..." /></div>
               </div>
-              <div class="col-lg-6 order-lg-1">
-                <div class="p-5 highlight-text">
-                  <h2 class="display-4">For those about to rock...</h2>
+              <div className="col-lg-6 order-lg-1 p-0">
+                <div className="p-5 highlight-text">
+                  <h2 className="display-4">Headphones for those about to rock...</h2>
                   <p className='text-dark'>Unleash the power of immersive sound with our premium speakers. Elevate your online shopping experience and indulge in crystal-clear audio like never before.</p>
-                  <button className='learnMoreBtn mt-3'>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                  <button className='learnMoreBtn mt-3' onClick={() => navigate("/mobiles")}>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
                 </div>
               </div>
             </div>
@@ -126,17 +144,17 @@ function Home() {
         </section>
 
         <div>
-          <section>
+          <section className='highlight-2'>
             <div className="container highlights  px-5">
-              <div className="row gx-5 align-items-center">
-                <div className="col-lg-6">
+              <div className="row align-items-center mx-0">
+                <div className="col-lg-6 p-0">
                   <div className="p-5"><img className="img-fluid rounded-circle" src="assets/img/02.jpg" alt="..." /></div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 p-0">
                   <div className="p-5 highlight-text">
-                    <h2 className="display-4">We salute you!</h2>
+                    <h2 className="display-4">Features you adore!</h2>
                     <p className='text-dark'>Discover the perfect companion for your digital lifestyle with our cutting-edge mobile phones. Experience seamless performance and stunning features that redefine mobile technology.</p>
-                    <button className='learnMoreBtn mt-3'>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                    <button className='learnMoreBtn mt-3' onClick={() => navigate("/mobiles")}>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
                   </div>
                 </div>
               </div>
@@ -145,15 +163,15 @@ function Home() {
           {/* Content section 3*/}
           <section>
             <div className="container highlights  px-5">
-              <div className="row gx-5 align-items-center">
-                <div className="col-lg-6 order-lg-2">
+              <div className="row align-items-center mx-0">
+                <div className="col-lg-6 order-lg-2 p-0">
                   <div className="p-5"><img className="img-fluid rounded-circle" src="assets/img/03.jpg" alt="..." /></div>
                 </div>
-                <div className="col-lg-6 order-lg-1">
+                <div className="col-lg-6 order-lg-1 p-0">
                   <div className="p-5  highlight-text">
-                    <h2 className="display-4">Let there be rock!</h2>
+                    <h2 className="display-4">Tees that glorify you!</h2>
                     <p className='text-dark'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-                    <button className='learnMoreBtn mt-3'>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
+                    <button className='learnMoreBtn mt-3' onClick={() => navigate("/product")}>SHOP NOW &nbsp; <i class="fa-solid fa-arrow-right-long arrow"></i></button>
                   </div>
                 </div>
               </div>
@@ -163,6 +181,8 @@ function Home() {
 
       </div>
 
+      {/* ===============================footer============================================ */}
+ 
     </div>
   )
 }

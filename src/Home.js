@@ -10,14 +10,15 @@
 function navSCroll() {
 
     let navbar = document.getElementById("navbar")
-    let scrollPosition = window.scrollY;
+    let scrollPosition = window?.scrollY;
 
     if (scrollPosition > 50) {
-        navbar.classList.add("bg-blur")
+        navbar?.classList.add("bg-blur")
     }
     else {
-        navbar.classList.remove("bg-blur")
+        navbar?.classList.remove("bg-blur")
     }
 }
 
 window.addEventListener('scroll', navSCroll);
+

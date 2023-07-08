@@ -29,9 +29,9 @@ function Signup() {
     }
 
     return (
-        <div className='signup-body py-5'>
+        <div className='login py-5'>
             <div className="row d-flex justify-content-center">
-                <div className="col-md-4  rounded-3 border border-1  shadow p-5 bg-light ">
+                <div className="col-md-4 login-form rounded-3 border border-1  shadow p-5 bg-light ">
                     <Formik validationSchema={validationSchema} initialValues={initialValues} onSubmit={signupSubmit}>
                         {
                             () => {

@@ -15,10 +15,13 @@ function Cocktail() {
 
 
   return (
-    <div className="container mt-5 py-5 ">
+    <div className=" mt-5 py-5 px-0 ">
       <div>
-        <div className="d-flex justify-content-between search-head ">
-          <h1 className="mb-2 fw-bolder category">Drinks</h1>
+        <div className="search-bg d-flex justify-content-between search-head p-5">
+          <div>
+            <h1 className="mb-2 fw-bolder category">Drinks</h1>
+          <span style={{color:"purple"}}>with mouth watering flavours and unique blends</span>
+            </div>
           <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
             <input type="text" placeholder="search drinks" className=" form-control border border-1 rounded-0 border-dark h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
           </div>
@@ -44,12 +47,14 @@ function Cocktail() {
             }
         </div>
       </div>
+      <div className="container">
       <div className="row py-2">
         {
           cocktailList &&
           cocktailList.map((item, index) => {
             return <CocktailCard key={index} item={item} />
           })}
+      </div>
       </div>
     </div>
   );
