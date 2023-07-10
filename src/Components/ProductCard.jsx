@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useContext, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { AppDetails } from '../App';
 
 function ProductCard({ item }) {
   const navigate = useNavigate();
 
   const { id, title, price, image, description } = item
+  const { cart, setCart } = useContext(AppDetails);
+  const addBtn = useRef()
+
+
+  function addToCart(item) {
+    const test = localStorage.getItem("appLogin")
+    if (test) {
+      const dataFound = cart.find((singleItem) => singleItem.id === item.id);
+
+      if (dataFound) {
+        alert("Already added in cart..!!");
+      } else {
+        setCart([...cart, item]);
+        addBtn.current.style.background = "green";
+        addBtn.current.textContent = "Added";
+      }
+    } else {
+      navigate('/login')
+    }
+    console.log(item.id);
+  }
 
   return (
     
@@ -21,7 +43,7 @@ function ProductCard({ item }) {
           <div className="btn btn-sm btn-light disabled rounded-0 w-100 btn-sm">14999/-</div>
         </div>
       </div>
-      <div className="btn btn-sm btn-primary w-100 rounded-0 btn-sm">Add to cart</div>
+      <div className="btn btn-sm btn-primary w-100 rounded-0 btn-sm" ref={addBtn} onClick={() => addToCart(item)}>Add to cart</div>
     </div>
   )
 }

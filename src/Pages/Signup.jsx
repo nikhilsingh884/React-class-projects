@@ -38,7 +38,7 @@ function Signup() {
                                 return (
 
                                     <Form>
-                                        <h4 className='fs-3 mb-4 '>Sign up</h4>
+                                        <h4 className='fs-3 mb-4 '>Register</h4>
                                         <hr />
                                         <label className='fw-bold text-muted' htmlFor="name">Enter name</label>
                                         <Field name="name" type="text" className="form-control mb-3" />
@@ -57,7 +57,7 @@ function Signup() {
 
                                         <button className='btn-primary btn w-100 mb-3' type='submit'>
                                             {
-                                                loading ? "Signing up.." : "SignUp"
+                                                loading ? "Registering..." : "Submit"
                                             }
                                         </button>
                                         <p className='text-muted agree'>By continuing, you agree to Nikhil's Conditions of Use and Privacy Notice.</p>

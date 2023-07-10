@@ -52,7 +52,7 @@ function Home() {
                   Discover the latest collection of cutting-edge mobile phones at our ecommerce store.  Whether you're an avid photographer, a multitasker, or a gaming enthusiast, we have the perfect mobile phone to suit your needs.
                 </p>
                 <hr />
-                <div className="btn btn-light rounded-5  btn-lg" onClick={() => navigate('/mobiles')}>Browse mobiles</div>
+                <div className="browse-btn btn btn-light rounded-1 w-75  btn-lg" onClick={() => navigate('/mobiles')}>Browse mobiles</div>
               </div>
             </div>
           </SwiperSlide>
@@ -70,7 +70,7 @@ function Home() {
                   Indulge in the art of mixology with our handcrafted cocktails, blending premium spirits with fresh ingredients for a taste sensation.
                 </p>
                 <hr />
-                <div className="btn btn-light rounded-5 btn-lg" onClick={() => navigate('/cocktail')}>Browse cocktails</div>
+                <div className="browse-btn btn btn-light rounded-1 w-75 btn-lg" onClick={() => navigate('/cocktail')}>Browse cocktails</div>
               </div>
             </div>
           </SwiperSlide>
@@ -84,11 +84,11 @@ function Home() {
             </div>
             <div className="text" data-swiper-parallax="-100">
               <p className='fw-light'>
-                Immerse yourself in stunning visuals with vibrant displays that bring your favorite movies, games, and presentations to life. Enjoy razor-sharp clarity, accurate color reproduction, and wide viewing angles for an immersive viewing experience.
+                Immerse yourself in stunning visuals with vibrant displays that bring your favorite movies, games, and presentations to life.
               </p>
               <hr />
 
-              <div className="btn btn-light rounded-5 btn-lg" onClick={() => navigate("/mobiles")}>Browse laptops</div>
+              <div className="browse-btn btn btn-light rounded-1 w-75 btn-lg" onClick={() => navigate("/mobiles")}>Browse laptops</div>
 
             </div>
           </SwiperSlide>
@@ -97,15 +97,15 @@ function Home() {
               Clothing
             </div>
             <div className="subtitle" data-swiper-parallax="-200">
-              with best discounts
+              with best discounts on women's wear & kid's wear
             </div>
             <div className="text" data-swiper-parallax="-100">
               <p className='fw-light'>
-                Explore our selection of professional-grade brushes, sponges, and tools that facilitate effortless application and precision, allowing you to achieve a flawless makeup look. From blending brushes to precision liners, our tools are designed for both makeup enthusiasts and professionals alike.
+                Explore our selection of professional-grade brushes, sponges, and tools that facilitate effortless application and precision, allowing you to achieve a flawless makeup look.
               </p>
               <hr />
 
-              <div className="btn btn-light rounded-5 btn-lg" onClick={() => navigate('/Product')}>Browse clothing</div>
+              <div className="browse-btn btn btn-light rounded-1 w-75 btn-lg" onClick={() => navigate('/Product')}>Browse clothing</div>
 
             </div>
           </SwiperSlide>
@@ -125,8 +125,9 @@ function Home() {
         </svg>
       </div> */}
       <div className="gradient-bg">
+        
 
-        <section id="scroll" className=''>
+        <section id="scroll" className='highlight-1'>
           <div className="container highlights px-5 px-sm-0">
             <div className="row  align-items-center mx-0">
               <div className="col-lg-6 order-lg-2 p-0">
@@ -161,7 +162,7 @@ function Home() {
             </div>
           </section>
           {/* Content section 3*/}
-          <section>
+          <section className='highlight-3'>
             <div className="container highlights  px-5">
               <div className="row align-items-center mx-0">
                 <div className="col-lg-6 order-lg-2 p-0">
@@ -181,7 +182,6 @@ function Home() {
 
       </div>
 
-      {/* ===============================footer============================================ */}
  
     </div>
   )

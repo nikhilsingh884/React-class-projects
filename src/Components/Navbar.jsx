@@ -25,18 +25,30 @@ function Navbar() {
                 <nav id='navbar' className="navbar navbar-expand-lg bg-body-light fixed-top ">
 
                     <div className="container-fluid  py-1   ">
+                        <div className='d-flex justify-content-around align-items-center'>
+                            <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon" />
+                            </button>
+                            <div className=' ms-2 logo' onClick={() => (navigate("/"))}> <img src={logo} style={{ height: "50px", width: "55px" }} alt="" /></div>
+                        </div>
 
-                        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon" />
-                        </button>
+                        <div className='d-flex justify-content-between align-items-center'>
+                            <div className=' cart-icon' onClick={() => navigate("/cart")}>
+                                <span style={{ color: "rgb(53, 2, 109)" }} className='fa-solid fa-cart-shopping fa-lg '></span>
 
-                        <div className=' ms-4 logo' onClick={() => (navigate("/"))}> <img src={logo} style={{ height: "50px", width: "55px" }} alt="" /></div>
+                                <div className="cart-badge-mobile rounded-5 bg-primary text-light d-flex justify-content-center align-items-center ">{cart.length}</div>
+                                <div>
+                                </div>
+                            </div>
 
-                        <div><div className='mobileloginBtn text-end'>
-                            {
-                                isLogin ? <button className='btn btn-outline ' onClick={() => (dispatch(logout()))}>Logout </button> : <button className='btn btn-outline' onClick={() => { navigate('/login') }}>Sign in</button>
-                            }
-                        </div></div>
+                            <div>
+                                <div className='mobileloginBtn text-end'>
+                                    {
+                                        isLogin ? <button className='btn btn-primary btn-sm  ' onClick={() => (dispatch(logout()))}>Logout </button> : <button className='btn btn-outline' onClick={() => { navigate('/login') }}>Log in</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
                         <div className="collapse navbar-collapse " id="navbarNav">
                             <div className='mobilesearchbar'>
                                 <input className='form-control rounded-1 border-dark' placeholder='search products' type="text" />
@@ -57,7 +69,6 @@ function Navbar() {
 
                                 <hr className='my-0' />
 
-
                                 <li className="nav-item text-center">
                                     <NavLink className="nav-link " activeClassName="active" to="/inventory">Admin Inventory</NavLink>
                                 </li>
@@ -67,7 +78,7 @@ function Navbar() {
                                 </li>
                                 <hr className='my-0' />
                                 <li className="nav-item text-center">
-                                    <NavLink className="nav-link " activeClassName="active" to="/Help">Help</NavLink>
+                                    <NavLink className="nav-link" activeClassName="active" to="/Help">Help</NavLink>
                                 </li>
                                 <hr className='my-0 ham-hr' />
 
@@ -92,14 +103,14 @@ function Navbar() {
                         <div className=' cart-icon-web me-4' onClick={() => navigate("/cart")}>
                             <span style={{ color: "rgb(53, 2, 109)" }} className='fa-solid fa-cart-shopping fa-lg '></span>
 
-                            <div className="cart-badge-web rounded-5 bg-dark text-light d-flex justify-content-center align-items-center ">{cart.length}</div>
+                            <div className="cart-badge-web rounded-5 bg-primary text-light d-flex justify-content-center align-items-center "> {cart.length}</div>
                             <div>
                             </div>
                         </div>
 
                         <div className='loginBtn'>
                             {
-                                isLogin ? <button className='btn btn-outline p-0 pe-2' onClick={() => (dispatch(logout()))}>Logout</button> : <button className='btn btn-outline p-0 pe-2' onClick={() => { navigate('/login') }}>Sign in</button>
+                                isLogin ? <button className='btn btn-outline p-0 pe-2' onClick={() => (dispatch(logout()))}>Logout</button> : <button className='btn btn-outline p-0 pe-2' onClick={() => { navigate('/login') }}>Log in</button>
                             }
                         </div>
 
@@ -107,7 +118,7 @@ function Navbar() {
                             <input className=' form-control border border-1 rounded-1 border-dark  px-2' placeholder='search' type="text" />
                         </div>
                     </div>
-                    
+
                 </nav>
 
 

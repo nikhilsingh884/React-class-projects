@@ -12,11 +12,24 @@ export const getProductList = createAsyncThunk("getProductList", async () => {
     }
 })
 
+export const getProductDetails = createAsyncThunk("fetchProductDetails", async (id) => {
+    try {
+        const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
+        console.log(response);
+
+        return response.data
+    } catch (error) {
+        console.log("error hai bhai", error);
+    }
+})
+
 const productSlice = createSlice({
     name: "productSlice",
     initialState: {
         loading: true,
         productList: [],
+        productDetails: {}
+
     },
     reducers: {
 
@@ -31,6 +44,14 @@ const productSlice = createSlice({
         },
         [getProductList.rejected]: (state, action) => {
             state.loading = false;
+        },
+        [getProductDetails.pending]: (state, action) => {
+            state.loading = true;
+        },
+        [getProductDetails.fulfilled]: (state, action) => {
+            state.loading = false;
+            state.productDetails = action.payload
+
         }
     }
 })

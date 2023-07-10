@@ -16,6 +16,7 @@ import BottomBar from "./Components/BottomBar";
 import { createContext, useState } from "react";
 import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer";
+import ProductDetails from "./Pages/ProductDetails";
 
 export const AppDetails = createContext();
 
@@ -31,12 +32,14 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/cocktail" element={<Cocktail />} />
-                    <Route path="/cocktail/:id" element={<PrivateRoute> <CocktailDetails /> </PrivateRoute>} />
+                    <Route path="/cocktail/:id" element={ <CocktailDetails /> } />
                     <Route path="/product" element={<Product />} />
+                    <Route path="/product/:id" element={ <ProductDetails /> } />
+
                     <Route path="/mobiles" element={<Mobiles />} />
-                    <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
-                    <Route path="/mobiles/:id" element={<PrivateRoute><MobilesDetails /></PrivateRoute>} />
-                    <Route path="/inventory" element={<PrivateRoute><Inventory /></PrivateRoute>} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/mobiles/:id" element={<MobilesDetails />} />
+                    <Route path="/inventory" element={<Inventory />} />
 
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />

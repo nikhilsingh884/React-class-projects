@@ -8,22 +8,31 @@ function Product() {
 
   const dispatch = useDispatch()
   const { productList, loading } = useSelector((state) => state.product)
-  const [searchValue, setSerachValue] = useState("")
 
 
 
   useEffect(() => {
     dispatch(getProductList())
-  }, [])
+  }, []);
+
+  
 
   return (
-    <div className='container products py-5 mt-5'>
-      <div className="d-flex justify-content-between search-head">
-        <h1 className="mb-2 fw-bolder category">Clothing</h1>
-        <div className=" cocktailSearch-outer d-flex justify-content-center align-items-center">
-          <input type="text" placeholder="search clothes" className="form-control border border-1 rounded-0 border-dark h-50" value={searchValue} onChange={(e) => setSerachValue(e.target.value)} />
+    <div className='main  py-5 mt-4'>
+       <div className="search-bg d-flex justify-content-between search-head ">
+          <div>
+          <h1 className="mb-2 fw-bolder category text-white">Clothing & Accessories</h1>
+          <hr />
+
+          <span style={{ color: "white" }}>Explore our finest collection this monsoon. 50% off on monsoon sale from 11th July. </span>
+          </div>
+          <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
+            <div class="input-group mb-3 ">
+              <input type="text" class="form-control"  placeholder="Search Clothes" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+              <button class="btn btn-primary " type="button" id="button-addon2">Search</button>
+            </div>
+          </div>
         </div>
-      </div>
       <div className="container d-flex justify-content-center align-items-center">{
         loading && <div>
           <div className="loader">
@@ -43,14 +52,15 @@ function Product() {
         </div>
       }
       </div>
+      <div className='container'>
+        <div className="row py-5">
+          {
+            productList &&
+            productList.map((item, index) => {
+              return <ProductCard key={index} item={item} />
 
-      <div className="row py-5">
-        {
-          productList &&
-          productList.map((item, index) => {
-            return <ProductCard key={index} item={item} />
-
-          })}
+            })}
+        </div>
       </div>
     </div>
 

@@ -1,23 +1,23 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCocktailDetails } from '../Redux/cocktailSlice';
+import { getProductDetails } from '../Redux/ProductSlice';
 import { useNavigate, useParams } from 'react-router-dom';
-import Cocktail from './Cocktail';
 import { AppDetails } from '../App';
 
-function CocktailDetails() {
+function ProductDetails() {
 
-    const { loading, cocktailDetails } = useSelector((state) => state.cocktail)
+    const { loading, productDetails } = useSelector((state) => state.product)
     const { cart, setCart } = useContext(AppDetails)
 
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    console.log(productDetails);
 
 
     useEffect(() => {
-        dispatch(getCocktailDetails(id))
+        dispatch(getProductDetails(id))
     }, [])
 
     // =================================================================================================
@@ -49,34 +49,31 @@ function CocktailDetails() {
     return (
         <div className="main-body">
             <div className='container container-details py-5 mt-5'>
-                <div className='d-flex justify-content-start'><div className="btn btn-primary rounded-0 btn-sm mb-3 " onClick={() => navigate(-1)}><span className='fa-solid fa-arrow-left'></span> Back</div> </div>
+                <div className='d-flex justify-content-start'><div className="btn btn-dark rounded-0 btn-sm mb-3 " onClick={() => navigate(-1)}><span className='fa-solid fa-arrow-left'></span> Back</div> </div>
                 <div className='border border-2  shadow bg-bg-secondary-subtle'>
                     <div className="row">
                         <div className="col-md-4 p-5">
-                            <img src={cocktailDetails.strDrinkThumb} alt="" style={{ height: "100%", width: "100%", borderRadius: "10px" }} />
+                            <img src={productDetails.image} alt="" style={{ height: "100%", width: "100%", borderRadius: "10px" }} />
                         </div>
                         <div className="col-md-8 p-5">
 
                             <div className="d-flex align-items-center">
-                                <div> <h1 className='text-left fw-bold text-muted me-2'>{cocktailDetails.strDrink} </h1>
+                                <div> <h1 className='text-left fw-bold text-muted me-2'>{productDetails.title} </h1>
                                     <p className='mb-0 text-muted'>(Product ID: {id})</p>
                                 </div>
                             </div>
 
-                            <h5 className='mb-4'>Type: <span className='fs-5 fw-light'>{cocktailDetails.strCategory}</span> </h5>
+                            <h5 className='mb-4'>Type: <span className='fs-5 fw-light'>{productDetails.category}</span> </h5>
 
                             <div className='p-3 rounded-3 bg-light'>
-                                <h3 className=''>Ingredients</h3>
+                                <h3 className=''>Description</h3>
                                 <hr />
-                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient1}</p>
-                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient2}</p>
-                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient3}</p>
-                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient4}</p>
+                                <p className='mb-1 text-muted'>{productDetails.description}</p>
                             </div>
 
                             <div className='p-3 rounded-3 mt-2 bg-light'>
                                 <p className='text-dark'>
-                                    {cocktailDetails.strInstructions}
+                                   Price:  {productDetails.price}
                                 </p>
                             </div>
 
@@ -88,4 +85,4 @@ function CocktailDetails() {
     )
 }
 
-export default CocktailDetails
+export default ProductDetails

@@ -5,10 +5,10 @@ function Footer() {
   return (
     <div>
       
-          <div className=" mt-5">
+          <div className="">
               <footer className="text-center text-white" style={{ backgroundColor: '#310059' }}>
                   <div className="container">
-                      <section className="mt-5">
+                      <section className="">
                           <div className="row text-center d-flex justify-content-center pt-5">
                               <div className="col-md-2">
                                   <h6 className="text-uppercase font-weight-bold">
