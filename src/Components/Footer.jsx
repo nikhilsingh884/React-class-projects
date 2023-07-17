@@ -42,10 +42,7 @@ function Footer() {
                           <div className="row d-flex justify-content-center">
                               <div className="col-lg-8">
                                   <p>
-                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                                      distinctio earum repellat quaerat voluptatibus placeat nam,
-                                      commodi optio pariatur est quia magnam eum harum corrupti
-                                      dicta, aliquam sequi voluptate quas.
+                                      Discover a world of convenience and endless possibilities at our online store. Shop now and enjoy secure transactions, speedy delivery, and exceptional customer service. Experience hassle-free shopping with our wide range of products, competitive prices, and a seamless checkout process. Your satisfaction is our priority as we strive to exceed your expectations every time. Start exploring our virtual shelves and embark on a delightful shopping journey today!
                                   </p>
                               </div>
                           </div>

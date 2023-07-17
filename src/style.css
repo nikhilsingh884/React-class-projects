@@ -412,25 +412,26 @@ input::placeholder {
     width: 25%;
 }
 
-
 .search-bg-drinks {
     background-image: url("Images/drinks-header-dark.jpg");
     background-size: cover;
     background-position: center;
+    padding: 40px 80px;
 }
+
 
 .search-bg-mobiles {
     background-image: url("Images/mobiles-header.jpg");
     background-size: cover;
     background-position: center;
-    padding: 40px 130px;
+    padding: 40px 80px;
 }
 
 .search-bg-clothes {
     background-image: url("Images/clothes-header.jpg");
     background-size: cover;
     background-position: center;
-    padding: 40px 130px;
+    padding: 40px 80px;
 }
 
 .animated-div {
@@ -486,9 +487,17 @@ input::placeholder {
     text-align: center !important;
 }
 
+.total-bar-outer {
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
 .total-bar {
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(255, 255, 255);
     width: auto;
+    /* backdrop-filter: blur(25px); */
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 /* ======================================hightlights================================================== */
@@ -747,6 +756,21 @@ canvas {
         top: 2px;
         right: 0px;
         font-size: 10px !important;
+    }
+
+    .total-bar {
+        padding: 10px 10px;
+    border-radius: 0px;
+    }
+
+    .total-bar h4 {
+        font-size: 14px !important;
+    }
+
+    .total-bar-outer {
+        padding:0;
+        margin-bottom: 79px !important;
+        border-radius: 0 !important;
     }
 
 }

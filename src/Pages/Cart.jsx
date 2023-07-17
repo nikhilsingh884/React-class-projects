@@ -83,185 +83,201 @@ function Cart() {
     return (
         <>
             {/* ======================cocktail cart================================= */}
-            <h1 className='text-center mt-5'>Cart</h1>
 
-            <div className='mt-3 px-md-5 px-sm-0 table-responsive table-responsive-sm'>
-                <h1 className=' mt-5 '>Drinks Cart</h1>
+            {
+                drinksCart.length > 0 &&
+                <div className='mt-5 px-md-5 px-sm-0 table-responsive table-responsive-sm'>
+                    <h1 className=' mt-5 '>Drinks Cart</h1>
 
-                <table className='table table-hover w-100 border border-1'>
-                    <thead className=''>
-                        <tr style={{ backgroundColor: "#3f158a" }} className="text-center text-light">
-                            <th>Sr. no.</th>
-                            <th>Product</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th className=''>Description</th>
-                            <th>Qty.</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {drinksCart.map((item, index) => {
-                            const { strDrink, strDrinkThumb, strInstructions } = item;
-                            return (
-                                <tr className="text-center align-text-bottom" key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>
-                                        <img
-                                            src={strDrinkThumb}
-                                            alt=""
-                                            className="img-fluid"
-                                            style={{ height: "50px", width: "50px", borderRadius: "5px" }}
-                                        />
-                                    </td>
-                                    <td>{strDrink}</td>
-                                    <td>{item.price}</td>
-                                    <td className="text-truncate " style={{ maxWidth: "0px" }}>
-                                        {strInstructions}
-                                    </td>
-                                    <td>
-                                        <div className="input">
-                                            <input style={{ width: "50px" }} defaultValue={1} className="" type="number" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button
-                                            className="btn btn-sm btn-danger"
-                                            onClick={() => deleteDrinksItem(index)}
-                                        >
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            );
-                        })}
-                    </tbody>
+                    <table className='table table-hover w-100 border border-1'>
+                        <thead className=''>
+                            <tr style={{ backgroundColor: "#3f158a" }} className="text-center text-light">
+                                <th>Sr. no.</th>
+                                <th>Product</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th className=''>Description</th>
+                                <th>Qty.</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {drinksCart.map((item, index) => {
+                                const { strDrink, strDrinkThumb, strInstructions } = item;
+                                return (
+                                    <tr className="text-center align-text-bottom" key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>
+                                            <img
+                                                src={strDrinkThumb}
+                                                alt=""
+                                                className="img-fluid"
+                                                style={{ height: "50px", width: "50px", borderRadius: "5px" }}
+                                            />
+                                        </td>
+                                        <td>{strDrink}</td>
+                                        <td>{item.price}</td>
+                                        <td className="text-truncate " style={{ maxWidth: "0px" }}>
+                                            {strInstructions}
+                                        </td>
+                                        <td>
+                                            <div className="input">
+                                                <input style={{ width: "50px" }} defaultValue={1} className="" type="number" />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button
+                                                className="btn btn-sm btn-danger"
+                                                onClick={() => deleteDrinksItem(index)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
 
-                </table>
+                    </table>
 
-            </div>
+                </div>
+            }
 
             {/* ===============================Mobiles-Cart======================= */}
-            <div className='   px-md-5 px-sm-0   table-responsive table-responsive-sm'>
-                <h1 className=' mt-5'>Mobiles Cart</h1>
 
-                <table className='table table-hover w-100 border border-1'>
-                    <thead className=''>
-                        <tr style={{ backgroundColor: "#3f158a" }} className="text-center text-light">
-                            <th>Sr. no.</th>
-                            <th>Product</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th className='description'>Descrption</th>
-                            <th>Qty.</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {mobilesCart.map((item, index) => {
-                            const { title, thumbnail, description } = item;
-                            return (
-                                <tr className="text-center align-text-bottom" key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>
-                                        <img
-                                            src={thumbnail}
-                                            alt=""
-                                            className="img-fluid"
-                                            style={{ height: "50px", width: "50px", borderRadius: "5px" }}
-                                        />
-                                    </td>
-                                    <td>{title}</td>
-                                    <td>{item.price}</td>
-                                    <td className="text-truncate description" style={{ maxWidth: "0px" }}>
-                                        {description}
-                                    </td>
-                                    <td>
-                                        <div className="input">
-                                            <input style={{ width: "50px" }} defaultValue={1} className="" type="number" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button
-                                            className="btn btn-sm btn-danger"
-                                            onClick={() => deleteMobilesItem(index)}
-                                        >
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            );
-                        })}
-                    </tbody>
+            {
+                mobilesCart.length > 0 &&
 
-                </table>
+                <div className='   px-md-5 px-sm-0   table-responsive table-responsive-sm'>
+                    <h1 className=' mt-5'>Mobiles Cart</h1>
 
-            </div>
+                    <table className='table table-hover w-100 border border-1'>
+                        <thead className=''>
+                            <tr style={{ backgroundColor: "#3f158a" }} className="text-center text-light">
+                                <th>Sr. no.</th>
+                                <th>Product</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th className='description'>Descrption</th>
+                                <th>Qty.</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+
+
+                                mobilesCart.map((item, index) => {
+                                    const { title, thumbnail, description } = item;
+
+                                    return (
+                                        <tr className="text-center align-text-bottom" key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>
+                                                <img
+                                                    src={thumbnail}
+                                                    alt=""
+                                                    className="img-fluid"
+                                                    style={{ height: "50px", width: "50px", borderRadius: "5px" }}
+                                                />
+                                            </td>
+                                            <td>{title}</td>
+                                            <td>{item.price}</td>
+                                            <td className="text-truncate description" style={{ maxWidth: "0px" }}>
+                                                {description}
+                                            </td>
+                                            <td>
+                                                <div className="input">
+                                                    <input style={{ width: "50px" }} defaultValue={1} className="" type="number" />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button
+                                                    className="btn btn-sm btn-danger"
+                                                    onClick={() => deleteMobilesItem(index)}
+                                                >
+                                                    Delete
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                        </tbody>
+
+                    </table>
+
+                </div>
+            }
 
             {/* ===============================clothes-Cart======================= */}
 
-            <div className=' px-md-5 px-sm-0 table-responsive table-responsive-sm'>
-                <h1 className='mt-5'>Clothes Cart</h1>
+            {
+                productCart.length > 0 &&
+                <div className=' px-md-5 px-sm-0 table-responsive table-responsive-sm'>
+                    <h1 className='mt-5'>Clothes Cart</h1>
 
-                <table className='table table-hover w-100 border border-1'>
-                    <thead className=''>
-                        <tr style={{ backgroundColor: "#3f158a" }} className="text-center text-light">
-                            <th>Sr. no.</th>
-                            <th>Product</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th className='description'>Descrption</th>
-                            <th>Qty.</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {productCart.map((item, index) => {
-                            const { title, price, image, description } = item;
-                            return (
-                                <tr className="text-center align-text-bottom" key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>
-                                        <img
-                                            src={image}
-                                            alt=""
-                                            className="img-fluid"
-                                            style={{ height: "50px", width: "50px", borderRadius: "5px" }}
-                                        />
-                                    </td>
-                                    <td>{title}</td>
-                                    <td>{price}</td>
-                                    <td className="text-truncate description" style={{ maxWidth: "0px" }}>
-                                        {description}
-                                    </td>
-                                    <td>
-                                        <div className="input">
-                                            <input style={{ width: "50px" }} defaultValue={1} className="" type="number" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button
-                                            className="btn btn-sm btn-danger"
-                                            onClick={() => deleteProductItem(index)}
-                                        >
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            );
-                        })}
-                    </tbody>
+                    <table className='table table-hover w-100 border border-1'>
+                        <thead className=''>
+                            <tr style={{ backgroundColor: "#3f158a" }} className="text-center text-light">
+                                <th>Sr. no.</th>
+                                <th>Product</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th className='description'>Descrption</th>
+                                <th>Qty.</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {productCart.map((item, index) => {
+                                const { title, price, image, description } = item;
+                                return (
+                                    <tr className="text-center align-text-bottom" key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>
+                                            <img
+                                                src={image}
+                                                alt=""
+                                                className="img-fluid"
+                                                style={{ height: "50px", width: "50px", borderRadius: "5px" }}
+                                            />
+                                        </td>
+                                        <td>{title}</td>
+                                        <td>{price}</td>
+                                        <td className="text-truncate description" style={{ maxWidth: "0px" }}>
+                                            {description}
+                                        </td>
+                                        <td>
+                                            <div className="input">
+                                                <input style={{ width: "50px" }} defaultValue={1} className="" type="number" />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button
+                                                className="btn btn-sm btn-danger"
+                                                onClick={() => deleteProductItem(index)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
 
-                </table>
+                    </table>
 
-                <div className=''>
-                    <div className=' d-flex justify-content-between align-items-center p-3 total-bar '>
-                        <div className='d-flex justify-content-between align-items-center'>
-                            <div className='me-4'><h4 className='mb-0'>Total amount: </h4></div>
-                            <div><h5 className='mb-0 me-4'>&#8377; {grandTotal} </h5></div>
-                        </div>
-                        <button style={{ backgroundColor: "#05b531" }} className='btn btn-sm text-light'>Proceed to payment <span className='fa-solid fa-angles-right fa-fade'></span></button>
+
+                </div>
+            }
+
+            <div className='position-fixed bottom-0 w-100  mb-2 total-bar-outer'>
+                <div className=' d-flex justify-content-between align-items-center total-bar '>
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <div className='me-2'><h4 className='mb-0'>Total amount: </h4></div>
+                        <div><h5 className='mb-0 me-4'>&#8377; {grandTotal} </h5></div>
                     </div>
+                    <button style={{ backgroundColor: "#05b531" }} className='btn btn-sm text-light'>Proceed to payment <span className='fa-solid fa-angles-right fa-fade'></span></button>
                 </div>
             </div>
 

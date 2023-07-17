@@ -21,17 +21,16 @@ function Cocktail() {
   return (
     <div className="main mt-4 py-5 ">
       <div>
-        <div className="search-bg-drinks d-flex justify-content-between">
-
+        <div className="search-bg-drinks  d-flex justify-content-between search-head ">
           <div>
-            <h1 className="mb-2 fw-bolder category text-white w-100 position-relative">Drinks</h1>
-            <div className='animated-div'></div>
+            <h1 className="mb-2 fw-bolder category text-white position-relative">Drinks</h1>
+            <div className='position-absolute top-50 h-25 bg-danger'></div>
 
-            <span style={{ color: "white" }}>with mouth watering flavours and unique blends</span>
+            <span style={{ color: "white" }}>Savoury and flavoury drinks that you admire..</span>
           </div>
           <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
             <div class="input-group mb-3 ">
-              <input type="text" class="form-control rounded-start-5" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder="Search drinks" aria-label="Recipient's username" aria-describedby="button-addon2" />
+              <input type="text" class="form-control rounded-start-5" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder="Search mobiles" aria-label="Recipient's username" aria-describedby="button-addon2" />
               <button style={{ backgroundColor: "#7d64ed" }} class="btn btn-primary rounded-end-5" type="button" id="button-addon2" onClick={handleSearch} >Search</button>
             </div>
           </div>

@@ -22,7 +22,7 @@ function Product() {
     <div className='main  py-5 mt-4'>
       <div className="search-bg-clothes d-flex justify-content-between search-head ">
           <div>
-          <h1 className="mb-2 fw-bolder category text-white">Clothing & Accessories</h1>
+          <h1 style={{fontSize:"64px"}} className="mb-2 fw-bolder category text-white">Clothing & Accessories</h1>
           <hr />
 
           <span style={{ color: "white" }}>Explore our finest collection this monsoon. 50% off on monsoon sale from 11th July. </span>
