@@ -23,11 +23,14 @@ export const AppDetails = createContext();
 function App() {
 
     const [cart, setCart] = useState([])
+    const [drinksCart, setDrinksCart] = useState([])
+    const [mobilesCart, setMobilesCart] = useState([])
+    const [productCart, setProductCart] = useState([])
 
 
     return (
         <>
-            <AppDetails.Provider value={{ cart, setCart }}>
+            <AppDetails.Provider value={{ cart, mobilesCart, setMobilesCart, setCart, productCart, setProductCart, setDrinksCart, drinksCart }}>
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />

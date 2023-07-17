@@ -1,8 +1,9 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductList } from '../Redux/ProductSlice'
 import ProductCard from '../Components/ProductCard'
+
 
 function Product() {
 
@@ -19,7 +20,7 @@ function Product() {
 
   return (
     <div className='main  py-5 mt-4'>
-       <div className="search-bg d-flex justify-content-between search-head ">
+      <div className="search-bg-clothes d-flex justify-content-between search-head ">
           <div>
           <h1 className="mb-2 fw-bolder category text-white">Clothing & Accessories</h1>
           <hr />
@@ -28,8 +29,8 @@ function Product() {
           </div>
           <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
             <div class="input-group mb-3 ">
-              <input type="text" class="form-control"  placeholder="Search Clothes" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-              <button class="btn btn-primary " type="button" id="button-addon2">Search</button>
+            <input type="text" class="form-control rounded-start-5"  placeholder="Search Clothes" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+            <button style={{ backgroundColor: "#7d64ed" }} class="btn btn-primary rounded-end-5 " type="button" id="button-addon2">Search</button>
             </div>
           </div>
         </div>
@@ -48,12 +49,13 @@ function Product() {
             <div className="bar10"></div>
             <div className="bar11"></div>
             <div className="bar12"></div>
+
           </div>
         </div>
       }
       </div>
       <div className='container'>
-        <div className="row py-5">
+        <div className="row py-5 m-0">
           {
             productList &&
             productList.map((item, index) => {

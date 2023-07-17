@@ -7,9 +7,10 @@
 //     navIcon.classList.add("collapse")
 // })
 
-function navSCroll() {
+function navScroll() {
 
-    let navbar = document.getElementById("navbar")
+    let navbar = document.getElementById("navbar");
+
     let scrollPosition = window?.scrollY;
 
     if (scrollPosition > 50) {
@@ -20,5 +21,5 @@ function navSCroll() {
     }
 }
 
-window.addEventListener('scroll', navSCroll);
+window.addEventListener('scroll', navScroll);
 

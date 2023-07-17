@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AppDetails } from '../App';
 
 function MobilesCard({ item, index }) {
-  const { cart, setCart } = useContext(AppDetails)
+  const { mobilesCart, setMobilesCart } = useContext(AppDetails)
   const addBtn = useRef()
 
 
@@ -11,22 +11,38 @@ function MobilesCard({ item, index }) {
 
   const { thumbnail, title, description, id } = item;
 
-  function addToCart(item) {
-    const test = localStorage.getItem("appLogin")
-    if (test) {
-      const dataFound = cart.find((singleItem) => singleItem.id === item.id);
+  function addToCart(item) {  
+      const dataFound = mobilesCart.find((singleItem) => singleItem.id === item.id);
 
       if (dataFound) {
         alert("Already added in cart..!!");
       } else {
-        setCart([...cart, item]);
+        setMobilesCart([...mobilesCart, item]);
         addBtn.current.style.background = "green";
         addBtn.current.textContent = "Added";
       }
-    } else {
-      navigate('/login')
-    }
+    
   }
+
+  // ========================add to cart after login only==========================
+
+  // function addToCart(item) {
+  //   const test = localStorage.getItem("appLogin")
+  //   if (test)
+  //    {
+  //     const dataFound = mobilesCart.find((singleItem) => singleItem.id === item.id);
+
+  //     if (dataFound) {
+  //       alert("Already added in cart..!!");
+  //     } else {
+  //       setMobilesCart([...mobilesCart, item]);
+  //       addBtn.current.style.background = "green";
+  //       addBtn.current.textContent = "Added";
+  //     }
+  //   } else {
+  //     navigate('/login')
+  //   }
+  // }
 
   return (
 
@@ -37,9 +53,9 @@ function MobilesCard({ item, index }) {
           {title}
           <p className='text-truncate' title={description}>{description}</p>
         </div>
-        <button className='btn  disabled w-100 rounded-0'>21499/-</button>
+        <button className='btn disabled w-100 rounded-0'>21499/-</button>
       </div>
-      <button className='btn btn-primary w-100 rounded-0' ref={addBtn} onClick={() => addToCart(item)}>Add to cart</button>
+      <button className='btn btn-primary w-100 rounded-0' ref={addBtn} onClick={() => addToCart(item)}> <span className='fa-solid fa-cart-shopping'></span> &nbsp;Add to cart</button>
     </div>
 
   )

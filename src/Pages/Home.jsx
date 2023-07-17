@@ -19,7 +19,7 @@ function Home() {
             "--swiper-pagination-color": "#fff",
           }}
           speed={600}
-          autoplay={true}
+          autoplay={false}
           parallax={false}
           pagination={{
             clickable: true,
@@ -48,9 +48,6 @@ function Home() {
                 at 0% interest
               </div>
               <div className="text" data-swiper-parallax="-100">
-                <p className='fw-light'>
-                  Discover the latest collection of cutting-edge mobile phones at our ecommerce store.  Whether you're an avid photographer, a multitasker, or a gaming enthusiast, we have the perfect mobile phone to suit your needs.
-                </p>
                 <hr />
                 <div className="browse-btn btn btn-light rounded-1 w-75  btn-lg" onClick={() => navigate('/mobiles')}>Browse mobiles</div>
               </div>
@@ -66,9 +63,6 @@ function Home() {
                 with mouth watering flavours and unique blends
               </div>
               <div className="text" data-swiper-parallax="-100">
-                <p className='fw-light'>
-                  Indulge in the art of mixology with our handcrafted cocktails, blending premium spirits with fresh ingredients for a taste sensation.
-                </p>
                 <hr />
                 <div className="browse-btn btn btn-light rounded-1 w-75 btn-lg" onClick={() => navigate('/cocktail')}>Browse cocktails</div>
               </div>
@@ -83,9 +77,6 @@ function Home() {
               Dell, HP, Lenovo, ASUS, LG Gram, Galaxy Book, etc.
             </div>
             <div className="text" data-swiper-parallax="-100">
-              <p className='fw-light'>
-                Immerse yourself in stunning visuals with vibrant displays that bring your favorite movies, games, and presentations to life.
-              </p>
               <hr />
 
               <div className="browse-btn btn btn-light rounded-1 w-75 btn-lg" onClick={() => navigate("/mobiles")}>Browse laptops</div>
@@ -100,9 +91,6 @@ function Home() {
               with best discounts on women's wear & kid's wear
             </div>
             <div className="text" data-swiper-parallax="-100">
-              <p className='fw-light'>
-                Explore our selection of professional-grade brushes, sponges, and tools that facilitate effortless application and precision, allowing you to achieve a flawless makeup look.
-              </p>
               <hr />
 
               <div className="browse-btn btn btn-light rounded-1 w-75 btn-lg" onClick={() => navigate('/Product')}>Browse clothing</div>

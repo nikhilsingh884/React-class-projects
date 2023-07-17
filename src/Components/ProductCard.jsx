@@ -6,31 +6,46 @@ function ProductCard({ item }) {
   const navigate = useNavigate();
 
   const { id, title, price, image, description } = item
-  const { cart, setCart } = useContext(AppDetails);
+  const {  productCart, setProductCart } = useContext(AppDetails);
   const addBtn = useRef()
 
 
   function addToCart(item) {
-    const test = localStorage.getItem("appLogin")
-    if (test) {
-      const dataFound = cart.find((singleItem) => singleItem.id === item.id);
+    const dataFound = productCart.find((singleItem) => singleItem.id === item.id);
 
-      if (dataFound) {
-        alert("Already added in cart..!!");
-      } else {
-        setCart([...cart, item]);
-        addBtn.current.style.background = "green";
-        addBtn.current.textContent = "Added";
-      }
+    if (dataFound) {
+      alert("Already added in cart..!!");
     } else {
-      navigate('/login')
+      setProductCart([...productCart, item]);
+      addBtn.current.style.background = "green";
+      addBtn.current.textContent = "Added";
     }
-    console.log(item.id);
+
   }
+
+  // ========================add to cart after login only==========================
+
+  // function addToCart(item) {
+  //   const test = localStorage.getItem("appLogin")
+  //   if (test)
+  //    {
+  //     const dataFound = productCart.find((singleItem) => singleItem.id === item.id);
+
+  //     if (dataFound) {
+  //       alert("Already added in cart..!!");
+  //     } else {
+  //       setProductCart([...productCart, item]);
+  //       addBtn.current.style.background = "green";
+  //       addBtn.current.textContent = "Added";
+  //     }
+  //   } else {
+  //     navigate('/login')
+  //   }
+  // }
 
   return (
     
-    <div className="col-md-2 mb-5" >
+    <div className="col-md-2 col-6 mb-5" >
       <div className="card mb-2 shadow rounded-0" onClick={() => navigate(`/product/${id}`)} style={{ cursor: "pointer" }}>
         <img style={{ height: "150px", width: "150px" }} src={image} className="w-100" alt="" />
         <div className="card-body p-2">
@@ -40,10 +55,10 @@ function ProductCard({ item }) {
           </p>
         </div>
         <div className="card-footer px-1 d-flex justify-content-between">
-          <div className="btn btn-sm btn-light disabled rounded-0 w-100 btn-sm">14999/-</div>
+          <div className="btn btn-sm btn-light disabled rounded-0 w-100 btn-sm">{price}</div>
         </div>
       </div>
-      <div className="btn btn-sm btn-primary w-100 rounded-0 btn-sm" ref={addBtn} onClick={() => addToCart(item)}>Add to cart</div>
+      <div className="btn btn-sm btn-primary w-100 rounded-0 btn-sm" ref={addBtn} onClick={() => addToCart(item)}> <span className='fa-solid fa-cart-shopping'></span> &nbsp;Add to cart</div>
     </div>
   )
 }
