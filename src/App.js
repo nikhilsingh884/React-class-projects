@@ -4,9 +4,7 @@ import Home from "./Pages/Home";
 import Cocktail from "./Pages/Cocktail";
 import Product from "./Pages/Product";
 import CocktailDetails from "./Pages/CocktailDetails";
-import PrivateRoute from "./Components/PrivateRoute";
 import Login from "./Pages/Login";
-import Help from "./Pages/Help";
 import Signup from "./Pages/Signup";
 import About from "./Pages/About";
 import Mobiles from "./Pages/Mobiles";
@@ -17,6 +15,7 @@ import { createContext, useState } from "react";
 import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer";
 import ProductDetails from "./Pages/ProductDetails";
+import ContactUs from "./Pages/ContactUs";
 
 export const AppDetails = createContext();
 
@@ -46,7 +45,7 @@ function App() {
 
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
-                    <Route path="/help" element={<Help />} />
+                    <Route path="/contactUs" element={<ContactUs />} />
                     <Route path="/about" element={<About />} />
 
                 </Routes>

@@ -7,7 +7,7 @@ function BottomBar() {
   return (
     <div>
       <div className="whatsapp-main">
-        <div className="whatsapp-order px-4 m-0 d-flex justify-content-between align-items-center text-center">
+        <div className="whatsapp-order m-0 d-flex justify-content-between align-items-center text-center">
 
 
           <div className='bottom-icon p-3  rounded-1' onClick={() => navigate("/")}> <span className='fa-solid fa-house fa-lg '></span><div><p className='mb-0 text-dark mt-1'>Home</p></div></div>

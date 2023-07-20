@@ -83,7 +83,7 @@ function Navbar() {
                                 </li>
                                 <hr className='my-0' />
                                 <li className="nav-item text-center">
-                                    <NavLink className="nav-link" activeClassName="active" to="/Help">Help</NavLink>
+                                    <NavLink className="nav-link" activeClassName="active" to="/contactUs">Contact us</NavLink>
                                 </li>
                                 <hr className='my-0 ham-hr' />
 

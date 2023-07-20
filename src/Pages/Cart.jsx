@@ -87,7 +87,7 @@ function Cart() {
             {
                 drinksCart.length > 0 &&
                 <div className='mt-5 px-md-5 px-sm-0 table-responsive table-responsive-sm'>
-                    <h1 className=' mt-5 '>Drinks Cart</h1>
+                    <h1 className=' mt-5 px-1'>Drinks Cart</h1>
 
                     <table className='table table-hover w-100 border border-1'>
                         <thead className=''>
@@ -149,7 +149,7 @@ function Cart() {
                 mobilesCart.length > 0 &&
 
                 <div className='   px-md-5 px-sm-0   table-responsive table-responsive-sm'>
-                    <h1 className=' mt-5'>Mobiles Cart</h1>
+                    <h1 className=' mt-5 px-1'>Mobiles Cart</h1>
 
                     <table className='table table-hover w-100 border border-1'>
                         <thead className=''>
@@ -214,7 +214,7 @@ function Cart() {
             {
                 productCart.length > 0 &&
                 <div className=' px-md-5 px-sm-0 table-responsive table-responsive-sm'>
-                    <h1 className='mt-5'>Clothes Cart</h1>
+                    <h1 className='mt-5 px-1'>Clothes Cart</h1>
 
                     <table className='table table-hover w-100 border border-1'>
                         <thead className=''>
@@ -275,7 +275,7 @@ function Cart() {
                 <div className=' d-flex justify-content-between align-items-center total-bar '>
                     <div className='d-flex justify-content-between align-items-center'>
                         <div className='me-2'><h4 className='mb-0'>Total amount: </h4></div>
-                        <div><h5 className='mb-0 me-4'>&#8377; {grandTotal} </h5></div>
+                        <div><h6 className='mb-0 me-4'>&#8377; {grandTotal} </h6></div>
                     </div>
                     <button style={{ backgroundColor: "#05b531" }} className='btn btn-sm text-light'>Proceed to payment <span className='fa-solid fa-angles-right fa-fade'></span></button>
                 </div>
