@@ -45,7 +45,7 @@ function ProductCard({ item }) {
 
   return (
     
-    <div className="col-md-2 col-6 mb-5" >
+    <div className="col-md-2 col-6 mb-5 px-1" >
       <div className="card mb-2 shadow rounded-0" onClick={() => navigate(`/product/${id}`)} style={{ cursor: "pointer" }}>
         <img style={{ height: "150px", width: "150px" }} src={image} className="w-100" alt="" />
         <div className="card-body p-2">

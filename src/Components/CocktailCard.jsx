@@ -29,25 +29,25 @@ function CocktailCard({ item }) {
 
     }
 
-  // ========================add to cart after login only==========================
+    // ========================add to cart after login only==========================
 
-  // function addToCart(item) {
-  //   const test = localStorage.getItem("appLogin")
-  //   if (test)
-  //    {
-  //     const dataFound = mobilesCart.find((singleItem) => singleItem.id === item.id);
+    // function addToCart(item) {
+    //   const test = localStorage.getItem("appLogin")
+    //   if (test)
+    //    {
+    //     const dataFound = mobilesCart.find((singleItem) => singleItem.id === item.id);
 
-  //     if (dataFound) {
-  //       alert("Already added in cart..!!");
-  //     } else {
-  //       setMobilesCart([...mobilesCart, item]);
-  //       addBtn.current.style.background = "green";
-  //       addBtn.current.textContent = "Added";
-  //     }
-  //   } else {
-  //     navigate('/login')
-  //   }
-  // }
+    //     if (dataFound) {
+    //       alert("Already added in cart..!!");
+    //     } else {
+    //       setMobilesCart([...mobilesCart, item]);
+    //       addBtn.current.style.background = "green";
+    //       addBtn.current.textContent = "Added";
+    //     }
+    //   } else {
+    //     navigate('/login')
+    //   }
+    // }
 
 
 
@@ -58,7 +58,7 @@ function CocktailCard({ item }) {
                 <img src={strDrinkThumb} className="w-100" alt="" />
                 <div className="card-body p-2">
                     <h6 className="m-0 text-truncate fw-bold">{strDrink}</h6>
-                    <p className="m-0 text-secondary" style={{ fontSize: "12px" }}>
+                    <p className="m-0 text-secondary text-truncate" style={{ fontSize: "12px" }}>
                         {strCategory}
                     </p>
                     <h5>{price}</h5>

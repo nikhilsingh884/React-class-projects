@@ -58,7 +58,7 @@ function Navbar() {
                             <div className='mobilesearchbar'>
                                 <input className='form-control rounded-1 border-dark' placeholder='search products' type="text" />
                             </div>
-                            <ul className="navbar-nav">
+                            <ul className="ms-0 navbar-nav">
                                 <li className="nav-item text-center">
                                     <NavLink className="nav-link" activeClassName="active" to="/Cocktail"> Drinks </NavLink>
                                 </li>

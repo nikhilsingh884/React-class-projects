@@ -46,7 +46,7 @@ function MobilesCard({ item, index }) {
 
   return (
 
-    <div className="col-md-2 col-6 mb-5 ">
+    <div className="col-md-2 col-6 mb-5 px-sm-1 px-md-2 ">
       <div style={{ cursor: "pointer" }} key={index} className="card  mb-2 shadow rounded-0" onClick={()=>navigate(`/mobiles/${id}`)} >
         <img src={thumbnail} style={{ height: "200px" }} alt="" />
         <div className="card-body text-truncate fw-bold">

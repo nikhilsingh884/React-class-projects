@@ -24,7 +24,6 @@ function Cocktail() {
         <div className="search-bg-drinks  d-flex justify-content-between search-head ">
           <div>
             <h1 className="mb-2 fw-bolder category text-white position-relative">Drinks</h1>
-            <div className='position-absolute top-50 h-25 bg-danger'></div>
 
             <span style={{ color: "white" }}>Savoury and flavoury drinks that you admire..</span>
           </div>

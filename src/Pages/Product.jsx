@@ -1,5 +1,5 @@
 
-import React, { useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductList } from '../Redux/ProductSlice'
 import ProductCard from '../Components/ProductCard'
@@ -16,24 +16,24 @@ function Product() {
     dispatch(getProductList())
   }, []);
 
-  
+
 
   return (
     <div className='main  py-5 mt-4'>
       <div className="search-bg-clothes d-flex justify-content-between search-head ">
-          <div>
-          <h1 style={{fontSize:"64px"}} className="mb-2 fw-bolder category text-white">Clothing & Accessories</h1>
+        <div>
+          <h1 style={{ fontSize: "64px" }} className="mb-2 fw-bolder category text-white">Clothing </h1>
           <hr />
 
           <span style={{ color: "white" }}>Explore our finest collection this monsoon. 50% off on monsoon sale from 11th July. </span>
-          </div>
-          <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
-            <div class="input-group mb-3 ">
-            <input type="text" class="form-control rounded-start-5"  placeholder="Search Clothes" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+        </div>
+        <div className=" d-flex cocktailSearch-outer justify-content-center align-items-center">
+          <div class="input-group mb-3 ">
+            <input type="text" class="form-control rounded-start-5" placeholder="Search Clothes" aria-label="Recipient's username" aria-describedby="button-addon2" />
             <button style={{ backgroundColor: "#7d64ed" }} class="btn btn-primary rounded-end-5 " type="button" id="button-addon2">Search</button>
-            </div>
           </div>
         </div>
+      </div>
       <div className="container d-flex justify-content-center align-items-center">{
         loading && <div>
           <div className="loader">

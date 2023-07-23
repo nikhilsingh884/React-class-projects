@@ -1,24 +1,17 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, {  useEffect,  } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCocktailDetails } from '../Redux/cocktailSlice';
 import { useNavigate, useParams } from 'react-router-dom';
-import { AppDetails } from '../App';
 
-function CocktailDetails({ item }) {
+function CocktailDetails() {
 
     const { loading, cocktailDetails } = useSelector((state) => state.cocktail)
-    const { drinksCart, setDrinksCart } = useContext(AppDetails)
-    const { strDrinkThumb, strCategory, strDrink, strInstructions, strIngredient4, strIngredient3, strIngredient2, strIngredient1 } = item;
 
 
 
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    const addBtn = useRef()
-
-
 
 
     useEffect(() => {
@@ -70,12 +63,12 @@ function CocktailDetails({ item }) {
                 <div className='border border-2  shadow bg-bg-secondary-subtle'>
                     <div className="row">
                         <div className="col-md-4 p-5">
-                            <img src={strDrinkThumb} alt="" style={{ height: "100%", width: "100%", borderRadius: "10px" }} />
+                            <img src={cocktailDetails.strDrinkThumb} alt="" style={{ height: "100%", width: "100%", borderRadius: "10px" }} />
                         </div>
                         <div className="col-md-8 p-5">
 
                             <div className="d-flex align-items-center">
-                                <div> <h1 className='text-left fw-bold text-muted me-2'>{strDrink} </h1>
+                                <div> <h1 className='text-left fw-bold text-muted me-2'>{cocktailDetails.strDrink} </h1>
                                     <p className='mb-0 text-muted'>(Product ID: {id})</p>
                                 </div>
                                 {/* <div className="card-footer d-flex justify-content-between mt-2">
@@ -83,20 +76,20 @@ function CocktailDetails({ item }) {
                                 </div> */}
                             </div>
 
-                            <h5 className='mb-4'>Type: <span className='fs-5 fw-light'>{strCategory}</span> </h5>
+                            <h5 className='mb-4'>Type: <span className='fs-5 fw-light'>{cocktailDetails.strCategory}</span> </h5>
 
                             <div className='p-3 rounded-3 bg-light'>
                                 <h3 className=''>Ingredients</h3>
                                 <hr />
-                                <p className='mb-1 text-muted'>{strIngredient1}</p>
-                                <p className='mb-1 text-muted'>{strIngredient2}</p>
-                                <p className='mb-1 text-muted'>{strIngredient3}</p>
-                                <p className='mb-1 text-muted'>{strIngredient4}</p>
+                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient1}</p>
+                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient2}</p>
+                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient3}</p>
+                                <p className='mb-1 text-muted'>{cocktailDetails.strIngredient4}</p>
                             </div>
 
                             <div className='p-3 rounded-3 mt-2 bg-light'>
                                 <p className='text-dark'>
-                                    {strInstructions}
+                                    {cocktailDetails.strInstructions}
                                 </p>
                             </div>
 
