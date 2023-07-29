@@ -5,31 +5,27 @@ function FormHandling() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [city, setCity] = useState("");
-    const [formValue, setFormValue] = useState({});
-    const [tableData, setTableData] = useState([{
-        name: "Nikhil",
-        email: "nikhilsingh884@outlook.com",
-        city: "ahmedabad"
-    }, {
-        name: "Nikhil",
-        email: "nikhilsingh884@outlook.com",
-        city: "ahmedabad"
-    }]);
+    const [tableData, setTableData] = useState([]);
 
-
+    const formValue={
+        name: name,
+        email: email,
+        city: city
+    }
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(name, email, city);
-
-        // formValue = {
-        //     name: name,
-        //     email: email,
-        //     city: city
-        // }
-
-        // setFormValue(formValue);
+        setTableData([...tableData, formValue])
+        setName("");
+        setEmail("");
+        setCity("");
     }
+
+    function handleDelete(item){
+        const updatedData= tableData.filter((singleItem)=>singleItem.index !== item.index );
+        tableData=updatedData;
+    }
+
 
     return (
         <div className='container py-5'>
@@ -58,6 +54,7 @@ function FormHandling() {
                             <th>Name</th>
                             <th>Email</th>
                             <th>City</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     {
@@ -70,6 +67,10 @@ function FormHandling() {
                                         <td>{name}</td>
                                         <td>{email}</td>
                                         <td>{city}</td>
+                                        <td>
+                                            <button className='btn btn-sm btn-danger me-1' onClick={()=>handleDelete()}>Delete</button>
+                                            <button className='btn btn-sm btn-primary'>Edit</button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             )
