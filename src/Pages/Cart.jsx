@@ -9,6 +9,7 @@ function Cart() {
 
     const cartLength = (drinksCart.length + mobilesCart.length + productCart.length)
 
+    const price =549;
 
 
     const deleteDrinksItem = (index) => {
@@ -36,12 +37,13 @@ function Cart() {
     const calculateDrinksTotal = () => {
         let total = 0;
         drinksCart.forEach((item) => {
-            const price = parseFloat(item.price);
+            const price = parseFloat(price);
             if (!isNaN(price)) {
                 total += price;
             }
         });
         return total;
+        console.log(calculateDrinksTotal);
     };
 
     const calculateMobilesTotal = () => {
@@ -116,7 +118,7 @@ function Cart() {
                                             />
                                         </td>
                                         <td>{strDrink}</td>
-                                        <td>{item.price}</td>
+                                        <td>{price}</td>
                                         <td className="text-truncate " style={{ maxWidth: "0px" }}>
                                             {strInstructions}
                                         </td>
@@ -148,7 +150,7 @@ function Cart() {
             {
                 mobilesCart.length > 0 &&
 
-                <div className='   px-md-5 px-sm-0   table-responsive table-responsive-sm'>
+                <div className='px-md-5 px-sm-0   table-responsive table-responsive-sm'>
                     <h1 className=' mt-5 px-1'>Mobiles Cart</h1>
 
                     <table className='table table-hover w-100 border border-1'>

@@ -19,7 +19,7 @@ function Cocktail() {
 
 
   return (
-    <div className="main mt-4 py-5 ">
+    <div className="main mt-3 py-5 ">
       <div>
         <div className="search-bg-drinks  d-flex justify-content-between search-head ">
           <div>

@@ -40,8 +40,8 @@ function Login() {
   // }
 
   return (
-    <div style={{maxWidth:"100vw"}}>
-      <div className=" login  mx-0 me-0">
+    <div style={{maxWidth:""}} >
+      <div className=" login   mx-0 me-0">
         <div className=' py-5'>
           <div className="back-btn btn btn-light mb-3 ms-5" style={{ cursor: "pointer" }} onClick={() => navigate("/")}> <span className='fa-solid fa-angle-left'></span>&nbsp; Back </div>
 

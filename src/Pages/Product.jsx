@@ -19,7 +19,7 @@ function Product() {
 
 
   return (
-    <div className='main  py-5 mt-4'>
+    <div className='main  py-5 mt-3'>
       <div className="search-bg-clothes d-flex justify-content-between search-head ">
         <div>
           <h1 style={{ fontSize: "64px" }} className="mb-2 fw-bolder category text-white">Clothing </h1>

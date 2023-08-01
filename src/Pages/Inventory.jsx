@@ -46,7 +46,7 @@ function Inventory() {
     return (
         <div className="main-body">
 
-            <div className='container py-5 mt-5'>
+            <div className='container py-5 mt-4'>
 
                 <AddProductModal open={open} handleClose={handleClose} />
                 <EditProductModal editOpen={editOpen} editHandleClose={editHandleClose} editValue={editValue} />

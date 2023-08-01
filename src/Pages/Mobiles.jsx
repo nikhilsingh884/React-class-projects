@@ -25,7 +25,7 @@ function Mobiles() {
 
 
     return (
-        <div className='main mt-4 py-5 bg-light'>
+        <div className='main mt-3 py-5 bg-light'>
             <div className="search-bg-mobiles  d-flex justify-content-between search-head ">
                 <div>
                     <h1 className="mb-2 fw-bolder category text-white position-relative">Mobiles & laptops</h1>

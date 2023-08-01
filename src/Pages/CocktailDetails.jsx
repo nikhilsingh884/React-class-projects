@@ -58,7 +58,7 @@ function CocktailDetails() {
 
     return (
         <div className="main-body">
-            <div className='container container-details py-5 mt-5'>
+            <div className='container container-details py-5 mt-4'>
                 <div className='d-flex justify-content-start'><div className="btn btn-primary rounded-0 btn-sm mb-3 " onClick={() => navigate(-1)}><span className='fa-solid fa-arrow-left'></span> Back</div> </div>
                 <div className='border border-2  shadow bg-bg-secondary-subtle'>
                     <div className="row">

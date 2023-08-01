@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
-import logo from "../Images/purpleLogo.png"
+import logo from "../Images/purpleLogo.webp"
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../Redux/authSlice';
 import '../Home'
@@ -34,12 +34,12 @@ function Navbar() {
                             <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon" />
                             </button>
-                            <div className='logo' onClick={() => (navigate("/"))}> <img className='' src={logo} style={{ height: "50px", width: "98px" }} alt="" /></div>
+                            <div className='logo' onClick={() => (navigate("/"))}> <img className='' src={logo} style={{ height: "45px", width: "85px" }} alt="" /></div>
                         </div>
 
                         <div className='d-flex justify-content-between align-items-center'>
                             <div className=' cart-icon' onClick={() => navigate("/cart")}>
-                                <span style={{ color: "rgb(53, 2, 109)" }} className='fa-solid fa-cart-shopping fa-lg '></span>
+                                <span className='fa-solid fa-cart-shopping fa-lg '></span>
 
                                 <div className="cart-badge-mobile rounded-5 bg-primary text-light d-flex justify-content-center align-items-center ">{cartLength}</div>
                                 <div>

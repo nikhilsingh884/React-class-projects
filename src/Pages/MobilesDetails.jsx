@@ -42,7 +42,7 @@ function MobilesDetails() {
     return (
         <div>
 
-            <div className='container container-details py-5 mt-5'>
+            <div className='container container-details py-5 mt-4'>
                 <div className='d-flex justify-content-end'><div className="btn btn-primary btn-sm mb-3 " onClick={() => navigate(-1)}>Back</div> </div>
 
                 <div className='border border-2 rounded-3 shadow bg-bg-secondary-subtle'>
