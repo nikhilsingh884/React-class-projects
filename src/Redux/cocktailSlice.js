@@ -30,14 +30,11 @@ import axios from "axios";
 //  )
 
 export const getCocktailList=createAsyncThunk("fetchCocktailList", async(parameter,{})=>{
-
     console.log('parameter', parameter);
-    const{search}=parameter 
-
+    const{search}=parameter
     try {
         const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
         return response.data.drinks
-
     } catch (error) {
         console.log('error', error)
     }
@@ -53,6 +50,7 @@ export const getCocktailDetails = createAsyncThunk("fetchCocktailDetails", async
         console.log("error hai bhai", error);
     }
 })
+
 const cocktailSlice=createSlice({
     name:"cocktailSlice",
     initialState:{
@@ -80,10 +78,7 @@ const cocktailSlice=createSlice({
         [getCocktailDetails.fulfilled]: (state, action) => {
             state.loading = false;
             state.cocktailDetails= action.payload
-            
         }
-
-
     }
 })
 

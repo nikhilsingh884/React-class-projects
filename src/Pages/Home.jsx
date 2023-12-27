@@ -41,7 +41,6 @@ function Home() {
             <div className='mobiles p-4 text-light  w-100  fs-5 mb-2 rounded-2 ' onClick={() => navigate("/mobiles")}>Mobiles <span className='fa-solid fa-arrow-right-long'></span> </div>
             <div className='clothing p-4 text-light  w-100  fs-5 mb-2  rounded-2 ' onClick={() => navigate("/product")}>Clothing <span className='fa-solid fa-arrow-right-long'></span> </div>
             <div className=' drinks p-4 text-light  w-100  fs-5 rounded-2 ' onClick={() => navigate("/cocktail")}>Drinks <span className='fa-solid fa-arrow-right-long'></span> </div>
-
           </div>
         </section>
 

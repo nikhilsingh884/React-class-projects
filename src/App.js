@@ -13,12 +13,15 @@ import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer";
 import ProductDetails from "./Pages/ProductDetails";
 import ContactUs from "./Pages/ContactUs";
+import CocktailPage from "./Pages/Cocktail";
+import MobilesPage from "./Pages/Mobiles";
+import ProductPage from "./Pages/Product";
 
 // ==================Lazy-loading-components==================================
 
-const CocktailPage = React.lazy(() => import('../src/Pages/Cocktail'));
-const MobilesPage= React.lazy(()=>import('../src/Pages/Mobiles'))
-const ProductPage = React.lazy(() => import('../src/Pages/Product'))
+// const CocktailPage = React.lazy(() => import('../src/Pages/Cocktail'));
+// const MobilesPage = React.lazy(() => import('../src/Pages/Mobiles'))
+// const ProductPage = React.lazy(() => import('../src/Pages/Product'))
 
 export const AppDetails = createContext();
 
@@ -35,12 +38,12 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/cocktail" element={<React.Suspense fallback={<>Loading..</>}><CocktailPage/></React.Suspense>} />
-                    <Route path="/cocktail/:id" element={ <CocktailDetails /> } />
-                    <Route path="/mobiles" element={<React.Suspense fallback={<>Loading..</>}><MobilesPage /></React.Suspense>} />
-                    <Route path="/product/:id" element={ <ProductDetails /> } />
+                    <Route path="/cocktail" element={<CocktailPage />} />
+                    <Route path="/cocktail/:id" element={<CocktailDetails />} />
+                    <Route path="/mobiles" element={<MobilesPage />} />
+                    <Route path="/product/:id" element={<ProductDetails />} />
 
-                    <Route path="/product" element={<React.Suspense fallback={<>Loading..</>}><ProductPage /></React.Suspense>} />
+                    <Route path="/product" element={<ProductPage />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/mobiles/:id" element={<MobilesDetails />} />
                     <Route path="/inventory" element={<Inventory />} />
@@ -51,7 +54,7 @@ function App() {
                     <Route path="/about" element={<About />} />
 
                 </Routes>
-                <Footer/>
+                <Footer />
                 <BottomBar />
             </AppDetails.Provider>
         </>

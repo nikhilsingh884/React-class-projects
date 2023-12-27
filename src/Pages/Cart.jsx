@@ -279,7 +279,7 @@ function Cart() {
                         <div className='me-2'><h4 className='mb-0'>Total amount: </h4></div>
                         <div><h6 className='mb-0 me-4'>&#8377; {grandTotal} </h6></div>
                     </div>
-                    <button style={{ backgroundColor: "#05b531" }} className='btn btn-sm text-light'>Proceed to payment <span className='fa-solid fa-angles-right fa-fade'></span></button>
+                    <button style={{ backgroundColor: "#05b531" }} className='btn btn-sm text-light'>Proceed to Checkout <span className='fa-solid fa-angles-right fa-fade'></span></button>
                 </div>
             </div>
 

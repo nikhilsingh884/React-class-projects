@@ -409,18 +409,21 @@ input::placeholder {
     background-image: url(Images/drinks-header-dark.webp);
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
 .clothing {
     background-image: url(Images/clothes-header.webp);
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
 .mobiles {
     background-image: url(Images/mobiles-header.webp);
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
 

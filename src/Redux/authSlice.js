@@ -9,7 +9,6 @@ function getLocalStorage(){
         }else{
             return false
         }
-    
 }
 
 // ============================Signup========================================
@@ -42,13 +41,11 @@ export const login = createAsyncThunk("login", async ({ formValue, navigate }, {
         const response = await axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCKmrEfz1uiGavj3tBhCo2EcAFFQiQIt7o", formValue)
         console.log(response);
         if (response.status === 200) {
-        
             navigate("/");
             dispatch(loginSuccess())
         }
     }
     catch (error) {
-
         dispatch(loginFail(error.response.data.error.message))
     }
 })

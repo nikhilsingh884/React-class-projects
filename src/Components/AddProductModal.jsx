@@ -22,8 +22,6 @@ function AddProductModal({ open, handleClose }) {
     
   }
   
-
-
   const initialValues =
   {
     name: "",
@@ -61,8 +59,7 @@ function AddProductModal({ open, handleClose }) {
                     name="name"
                     component="div"
                   />
-
-
+                  
                 <label htmlFor="category">Select Category </label>
                 <Field as="select" className="form-control mb-4" name="category">
                   <option value="select">----select----</option>
@@ -105,7 +102,6 @@ function AddProductModal({ open, handleClose }) {
                     addProductLoading ? "adding.." :"Add to inventory"
                   }
                 </button>
-
               </Form>
             }
           }
